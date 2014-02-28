@@ -26,6 +26,7 @@
 - Whenever you edit and save `sass/site.scss` Grunt will compile the correct css for you inside `public/css/reinierladan.min.css`
 - That's pretty much it.
 
-## Thanks to (this site makes use of the following libs…)
+## Thanks to
+(this site makes use of the following libs…)
 - [Normalize.css](http://git.io/normalize) 
 - [StackIcons](http://stackicons.com) (not trough Bower yet, so copied it from source)
