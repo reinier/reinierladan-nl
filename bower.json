@@ -1,0 +1,22 @@
+{
+  "name": "reinierladan",
+  "version": "0.1.0",
+  "authors": [
+    "Reinier Ladan <reinierl@gmail.com>"
+  ],
+  "description": "personal website",
+  "license": "none",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "sticky-kit": "1.0.3",
+    "normalize.css": "~3.0.0"
+  }
+}
