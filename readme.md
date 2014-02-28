@@ -1,11 +1,11 @@
 # Read me for development
 
 ## Requirements
-- Grunt
-- Bower
-- Sass
-- Bourbon
-- Neat
+- [Grunt](http://gruntjs.com)
+- [Bower](http://bower.io)
+- [Sass](http://sass-lang.com)
+- [Bourbon](http://bourbon.io)
+- [Neat](http://neat.bourbon.io)
 - And maybe stuff needed to run the listed things
 
 ## Quick setup
