@@ -18,9 +18,11 @@
     bourbon install
     neat install
     cd ../
+    grunt sass
+    grunt cssmin
 ```
 
-- Then you are ready to startup Grunt in the root directory: `grunt`
+- Then you are ready to startup Grunt in the root directory to watch for scss changes: `grunt`
 - Whenever you edit and save `sass/site.scss` Grunt will compile the correct css for you inside `public/css/reinierladan.min.css`
 - That's pretty much it.
 
