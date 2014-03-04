@@ -1,4 +1,7 @@
 module.exports = function(grunt) {
+
+	require('load-grunt-tasks')(grunt);
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		sass: {
@@ -25,11 +28,6 @@ module.exports = function(grunt) {
 			}
 		},
 	});
-
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 	grunt.registerTask('default',['watch:css']);
 };
