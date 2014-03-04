@@ -20,8 +20,6 @@
     neat install
     bitters install
     cd ../
-    grunt sass
-    grunt cssmin
 ```
 
 - Then you are ready to startup Grunt in the root directory to watch for scss changes: `grunt`
