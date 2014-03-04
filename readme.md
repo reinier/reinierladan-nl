@@ -4,8 +4,9 @@
 - [Grunt](http://gruntjs.com)
 - [Bower](http://bower.io)
 - [Sass](http://sass-lang.com)
-- [Bourbon](http://bourbon.io)
-- [Neat](http://neat.bourbon.io)
+- [Bourbon](http://bourbon.io) (Sass extension)
+- [Neat](http://neat.bourbon.io) (Bourbon extension)
+- [Bitters](http://bitters.bourbon.io) (Bourbon extension)
 - And maybe stuff needed to run the listed things
 
 ## Quick setup
@@ -17,6 +18,7 @@
     cd sass/
     bourbon install
     neat install
+    bitters install
     cd ../
     grunt sass
     grunt cssmin
@@ -28,5 +30,5 @@
 
 ## Thanks to
 (this site makes use of the following libs…)
-- [Normalize.css](http://git.io/normalize) 
+- [Normalize.css](http://git.io/normalize)
 - [StackIcons](http://stackicons.com) (not trough Bower yet, so copied it from source)
