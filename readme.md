@@ -23,8 +23,8 @@
 ```
 
 - Then you are ready to startup Grunt in the root directory to watch for scss changes: `grunt`
-- Whenever you edit and save `sass/site.scss` Grunt will compile the correct css for you inside `public/css/reinierladan.min.css`
-- That's pretty much it.
+- Whenever you edit and save `src/site.scss` or an html file in `src/` Grunt will compile the correct files for you inside `public/`
+- That's pretty much it. Now you can view the site by opening `public/index.html`.
 
 ## Thanks to
 (this site makes use of the following libs…)

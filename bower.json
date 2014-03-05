@@ -15,8 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.0",
-    "sticky-kit": "1.0.3",
     "normalize.css": "~3.0.0"
   }
 }
