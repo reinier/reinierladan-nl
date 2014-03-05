@@ -7,20 +7,20 @@ module.exports = function(grunt) {
 		sass: {
 			build: {
 		        files: {
-		            './build/site.css': './src/sass/site.scss'
+		            './public/css/reinierladan.css': './src/site.scss'
 		        }
 		    }
 	    },
 		watch: {
 			build: {
-				files: ['**/*.scss','src/*.html','html_includes/*.html'],
+				files: ['src/*.scss','src/*.html','html_includes/*.html'],
 				tasks: ['sass','cssmin','bake']
 			},
 		},
 		cssmin: {
 			combine: {
 				files: {
-					'./public/css/reinierladan.min.css': ['./bower_components/normalize.css/normalize.css','./user_components/stackicons-social-minimal.min.css','./build/site.css']
+					'./public/css/reinierladan.min.css': ['./public/css/reinierladan.css']
 				}
 			}
 		},
@@ -34,4 +34,5 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('default',['watch:build']);
+	grunt.registerTask('render',['sass','cssmin','bake']);
 };

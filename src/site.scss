@@ -1,6 +1,9 @@
-@import "bourbon/bourbon";
-@import "bitters/bitters";
-@import "neat/neat";
+@import "../bower_components/normalize.css/normalize.css";
+@import "user_components/stackicons-social-minimal.min.css";
+
+@import "sass/bourbon/bourbon";
+@import "sass/bitters/bitters";
+@import "sass/neat/neat";
 $mobile: new-breakpoint(max-width 900px 2);
 $mediumscreen: new-breakpoint(max-width 1100px 12);
 

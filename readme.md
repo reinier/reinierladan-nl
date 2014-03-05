@@ -14,12 +14,12 @@
 - Run the following inside the project root:
 ```bash
     bower install
-    npm install
-    cd sass/
+    cd src/sass/
     bourbon install
     neat install
     bitters install
-    cd ../
+    cd ../../
+    npm install
 ```
 
 - Then you are ready to startup Grunt in the root directory to watch for scss changes: `grunt`
