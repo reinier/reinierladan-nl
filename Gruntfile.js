@@ -5,16 +5,16 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		sass: {
-			dist: {
+			build: {
 		        files: {
-		            './src/site.css': './sass/site.scss'
+		            './src/site.css': './src/sass/site.scss'
 		        }
 		    }
 	    },
 		watch: {
-			css: {
-				files: ['**/*.scss'],
-				tasks: ['sass','cssmin']
+			build: {
+				files: ['**/*.scss','src/*.html','html_includes/*.html'],
+				tasks: ['sass','cssmin','bake']
 			},
 			options: {
 		      forever: true,
@@ -27,23 +27,14 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		// bake: {
-	    //     your_target: {
-	    //         options: {
-	    //             // Task-specific options go here.
-	    //         },
-		//
-	    //         files: {
-	    //             // files go here, like so:
-		//
-	    //             "dist/index.html": "app/index.html",
-	    //             "dist/mobile.html": "app/mobile.html"
-		//
-	    //             // etc ...
-	    //         }
-	    //     },
-	    // },
+		bake: {
+	        build: {
+	            files: {
+	                "public/index.html": "src/index.html"
+	            }
+	        },
+	    },
 	});
 
-	grunt.registerTask('default',['watch:css']);
+	grunt.registerTask('default',['watch:build']);
 };
