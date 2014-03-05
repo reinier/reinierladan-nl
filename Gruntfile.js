@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 	    },
 		watch: {
 			build: {
-				files: ['src/*.scss','src/*.html','html_includes/*.html'],
+				files: ['src/*.scss','src/*.html','src/html_includes/*.html'],
 				tasks: ['sass','cssmin','bake']
 			},
 		},
@@ -26,9 +26,13 @@ module.exports = function(grunt) {
 		},
 		bake: {
 	        build: {
-	            files: {
-	                "public/index.html": "src/index.html"
-	            }
+	            files: [{
+			        expand: true,
+			        cwd: './src',
+			        src: ['*.html'],
+			        dest: './public',
+			        ext: '.html'
+				}]
 	        },
 	    },
 	});
