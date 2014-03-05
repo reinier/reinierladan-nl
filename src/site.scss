@@ -12,13 +12,12 @@ body {
 
 p {
 	margin: 0 0 1em 0;
-	line-height: 1.5em;
+	line-height: 1.4em;
 
 	@include media($mobile) {
-		margin-left: 1em;
-		margin-right: 1em;
+		margin-left: 1rem;
+		margin-right: 1rem;
 		font-size: 1.1em;
-		line-height: 1.5em;
 	}
 }
 
@@ -28,14 +27,21 @@ a {
 
 h1 {
 	margin: 1em 0 0 0;
+	font-family: "nimbus-sans", sans-serif;
+	font-weight: bold;
 }
 
 h2 {
-	margin: 0 0 0.6em 0;
+	margin: 0 0 0.35em 0;
+	font-family: "nimbus-sans", sans-serif;
+	font-weight: 200;
+	letter-spacing: -0.02em;
 
 	@include media($mobile) {
-		text-align: center;
-		font-size: 1.4em;
+		font-size: 1.3em;
+		margin-left: 1rem;
+		font-weight: bold;
+		margin-bottom: 1em;
 	}
 }
 
@@ -51,10 +57,26 @@ ul {
 
 .header {
 	@include outer-container;
+	@include border-bottom-radius(5px);
+
+	padding-bottom: 1em;
+	margin-bottom: 2em;
+	background-color: #444;
+	color: #fff;
+
+	@include media($mediumscreen) {
+		@include border-bottom-radius(0px);
+	}
+
+	@include media($mobile) {
+		@include border-bottom-radius(0px);
+		margin-bottom: 0;
+	}
+
 	.header__logo {
 		@include span-columns(3);
 		text-align: center;
-		margin-top: 1em;
+		margin-top: 1.8em;
 		@include media($mobile) {
 	    	@include span-columns(2);
 		}
@@ -66,19 +88,17 @@ ul {
 	    	text-align: center;
 		}
 	}
-	padding-bottom: 1em;
-	margin-bottom: 2em;
-	background-color: #C1EBBB;
+
 
 	a {
-		color: #0C6300;
+		color: #BFE4FF;
 		font-weight: bold;
 	}
 
 	h1 {
 		a {
 			text-decoration: none;
-			color: #000;
+			color: #fff;
 		}
 	}
 }
@@ -89,20 +109,8 @@ nav {
     	@include span-columns(2);
 	}
 
-	.socials {
-		font-size: 1em;
-		padding-top: 0.5em;
-		text-align: center;
-
-		@include media($mobile) {
-			font-size: 1.4em;
-		}
-
-	}
-
 	ol {
 		list-style-type: disc;
-		margin: 2em 0 0 0;
 		padding: 1em 0 1em 3em;
 		background: #FFFCCE;
 		border: 1px solid #bfbfbf;
@@ -116,9 +124,12 @@ nav {
 		}
 
 		@include media($mobile) {
-			margin: 2em 1em;
+			margin: 0 0 2em 0;
 			text-align: center;
 			padding: 2em 0;
+			border-radius: 0;
+			border: 0px;
+			border-bottom: 1px solid #bfbfbf;
 		}
 
 		li {
@@ -135,12 +146,22 @@ nav {
 
 			a {
 				color: #3500D0;
-
 				@include media($mobile) {
-						text-decoration: underline;
+					text-decoration: underline;
+					@include button;
+					font-size: 1.1em;
 				}
 			}
 		}
+	}
+}
+
+.socials {
+	font-size: 1em;
+	padding-top: 0.5em;
+
+	@include media($mobile) {
+		font-size: 1.4em;
 	}
 }
 
