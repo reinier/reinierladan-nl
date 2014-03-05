@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 		sass: {
 			build: {
 		        files: {
-		            './public/css/reinierladan.css': './src/site.scss'
+		            './public/css/site.css': './src/site.scss'
 		        }
 		    }
 	    },
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 		cssmin: {
 			combine: {
 				files: {
-					'./public/css/reinierladan.min.css': ['./public/css/reinierladan.css']
+					'./public/css/full.min.css': ['./bower_components/normalize.css/normalize.css','./src/user_components/stackicons-social-minimal.min.css','./public/css/site.css']
 				}
 			}
 		},
