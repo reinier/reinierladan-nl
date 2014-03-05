@@ -1,4 +1,6 @@
-# Read me for development
+# Read me
+
+Follow the development of this site on [beta.reinierladan.nl](http://beta.reinierladan.nl)
 
 ## Requirements
 - [Grunt](http://gruntjs.com)
