@@ -35,8 +35,19 @@ module.exports = function(grunt) {
 				}]
 	        },
 	    },
+		connect: {
+            server: {
+                options: {
+                    port: 8000,
+                    hostname: '0.0.0.0',
+                    base: './public',
+                    open: true
+                }
+            }
+        }
 	});
 
 	grunt.registerTask('default',['watch:build']);
 	grunt.registerTask('render',['sass','cssmin','bake']);
+	grunt.registerTask('serve', ['connect:server','default']);
 };

@@ -8,7 +8,8 @@
     "grunt-contrib-concat": "^0.3.0",
     "grunt-contrib-cssmin": "^0.8.0",
     "grunt-bake": "^0.3.8",
-    "load-grunt-tasks": "~0.4.0"
+    "load-grunt-tasks": "~0.4.0",
+    "grunt-contrib-connect": "~0.7.1"
   },
   "scripts": {
     "postinstall": "grunt render"
