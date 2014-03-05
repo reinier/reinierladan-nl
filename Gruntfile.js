@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 		sass: {
 			build: {
 		        files: {
-		            './src/site.css': './src/sass/site.scss'
+		            './build/site.css': './src/sass/site.scss'
 		        }
 		    }
 	    },
@@ -16,14 +16,11 @@ module.exports = function(grunt) {
 				files: ['**/*.scss','src/*.html','html_includes/*.html'],
 				tasks: ['sass','cssmin','bake']
 			},
-			options: {
-		      forever: true,
-		    },
 		},
 		cssmin: {
 			combine: {
 				files: {
-					'./public/css/reinierladan.min.css': ['./bower_components/normalize.css/normalize.css','./src/stackicons-social-minimal.min.css','./src/site.css']
+					'./public/css/reinierladan.min.css': ['./bower_components/normalize.css/normalize.css','./user_components/stackicons-social-minimal.min.css','./build/site.css']
 				}
 			}
 		},
