@@ -114,7 +114,7 @@ nav {
 	top: 15px;
 
 	@include media($mediumscreen) {
-		top: 0px;
+		position: static;
 	}
 
 	ol {

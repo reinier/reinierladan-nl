@@ -458,7 +458,7 @@ nav {
         margin-right: 0; } }
   @media screen and (max-width: 1100px) {
     nav {
-      top: 0px; } }
+      position: static; } }
   nav ol {
     list-style-type: disc;
     padding: 1em 0 1em 3em;
