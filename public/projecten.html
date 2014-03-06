@@ -5,8 +5,8 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/full.min.css">
-	<script type="text/javascript" src="//use.typekit.net/mer2knz.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script src="js/_bower.js"></script>
+	<script src="js/responsive-class.js"></script>
 	
 </head>
 
@@ -44,5 +44,27 @@
 			<p><em>Andere projecten waar ik aan gewerkt heb:</em> <a href="http://screenshotapp.com">Screenshot app</a>, <!-- <a href="http://beinghome.nl">Being Home</a> (2012), --><a href="http://nlbuzz.nl">NLbuzz</a>, <a href="http://utrecht2013.com">EYOF 2013</a>, <a href="http://cmi-holding.com">CMI Holding</a>, WK Voetbal 2012 Tweedescherm app, <a href="http://eredivisielive.nl/sidekick">Eredivisie Live Sidekick</a>, EredivisieLive.nl (nu FOX Sports), <a href="http://www.centralparqsoftware.com">CentralParQ Software</a>, <a href="http://nlbuzz.com/en/pow-wow-platform">Pow-Wow</a>, <a href="http://sport.nl">Sport.nl</a>, <a href="http://nieuwsuur.nl">Nieuwsuur</a>, <a href="http://jeugdjournaal.nl">NOS Jeugdjournaal</a>, <a href="http://nos.nl/wk2010">NOS WK Voetbal 2010</a>, NOS WK Voetbal 2010 Tweedescherm app, <a href="http://nos.nl">NOS.nl website</a>, <a href="http://nos.nl/os2010/">NOS Olympische Winterspelen 2010 website</a>, NOS PS3 Video app, NOS Philips NetTV Video app, <a href="http://nos.nl/dossier/165282-tour-de-france-2010/">NOS Tour de France subsite</a>, <a href="http://os2008.nos.nl/">NOS Olympische Spelen 2008</a>, <a href="http://taalunieversum.org">Taalunieversum</a>, <a href="http://taaladvies.net">Taaladvies.net</a>, <a href="http://woordenlijst.org">Woordenlijst.org</a>, <a href="http://vinoo.eu">Vinoo</a> <em>en nog veel meer</em>.</p>
 		</div>
 	</div>
+	<div class="meta-info-button">
+		<a href="#meta"><img src="img/question.svg"></a>
+	</div>
+	<script>
+		$( document ).ready(function() {
+			$(".meta-info-button").headroom();
+			$(".meta-info-button a").click(function(){
+	
+				var theWidth = "90%";
+				if(document.documentElement.clientWidth < 900)
+				{
+					theWidth = "100%";
+				}
+	
+				$.colorbox({width:theWidth,href:"index-meta.html"});
+				// var theContent = $( ".meta-info" ).html();
+				// $.colorbox({width:"90%",html:theContent});
+			});
+	
+		});
+	</script>
+	
 </body>
 </html>

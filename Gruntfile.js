@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 		watch: {
 			build: {
 				files: ['src/*.scss','src/*.html','src/html_includes/*.html'],
-				tasks: ['sass','cssmin','bake']
+				tasks: ['render']
 			},
 		},
 		cssmin: {
@@ -44,10 +44,25 @@ module.exports = function(grunt) {
                     open: true
                 }
             }
-        }
+        },
+		bower_concat: {
+		  all: {
+		    dest: './public/js/_bower.js',
+		    exclude: [
+		        'normalize.css'
+		    ],
+			dependencies: {
+		      'headroom': 'jquery',
+		      'jquery-colorbox': 'jquery'
+		    },
+		    bowerOptions: {
+		      relative: false
+		    }
+		  }
+		}
 	});
 
 	grunt.registerTask('default',['watch:build']);
-	grunt.registerTask('render',['sass','cssmin','bake']);
+	grunt.registerTask('render',['sass','cssmin','bake','bower_concat']);
 	grunt.registerTask('serve', ['connect:server','default']);
 };

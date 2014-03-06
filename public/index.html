@@ -5,8 +5,8 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/full.min.css">
-	<script type="text/javascript" src="//use.typekit.net/mer2knz.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script src="js/_bower.js"></script>
+	<script src="js/responsive-class.js"></script>
 	
 </head>
 
@@ -44,25 +44,50 @@
 			</div>
 			<div class="content__chapter">
 				<h2 id="projecten">Projecten en opdrachtgevers</h2>
+				<div class="clients">
+					<img src="img/logos-clients.png">
+				</div>
 				<div class="portfolio--home">
 					<div class="portfolio__item">
 						<a href="https://itunes.apple.com/nl/app/nos/id516491461?mt=8">
-							<img class="portfolio__image" src="img/portfolio/nos-app.png">
+							<img class="portfolio__image" src="img/portfolio/nos-app.jpg">
 							<p>NOS app</p>
 						</a>
 					</div>
 					<div class="portfolio__item">
 						<a href="http://npo.nl">
-							<img class="portfolio__image" src="img/portfolio/npo.png">
+							<img class="portfolio__image" src="img/portfolio/npo.jpg">
 							<p>NPO.nl</p>
 						</a>
 					</div>
 					<div class="portfolio__item">
 						<a href="http://foxsports.nl">
-							<img class="portfolio__image" src="img/portfolio/fox.png">
+							<img class="portfolio__image" src="img/portfolio/fox.jpg">
 							<p>FOX Sports</p>
 						</a>
 					</div>
+
+					<div class="portfolio__item">
+						<a href="http://adformatie.nl">
+							<img class="portfolio__image" src="img/portfolio/adformatie.jpg">
+							<p>Adformatie</p>
+						</a>
+					</div>
+					<div class="portfolio__item">
+						<a href="http://rtl.nl">
+							<img class="portfolio__image" src="img/portfolio/rtl-id.jpg">
+							<p>RTL ID structuur</p>
+						</a>
+					</div>
+					<div class="portfolio__item">
+						<a href="http://nos.nl/op3">
+							<img class="portfolio__image" src="img/portfolio/nosop3.jpg">
+							<p>NOS op 3</p>
+						</a>
+					</div>
+
+
+
 				</div>
 				<p><a href="projecten.html">Meer projecten en opdrachtgevers »</a></p>
 			</div>
@@ -78,5 +103,27 @@
 			</div>
 		</div>
 	</div>
+	<div class="meta-info-button">
+		<a href="#meta"><img src="img/question.svg"></a>
+	</div>
+	<script>
+		$( document ).ready(function() {
+			$(".meta-info-button").headroom();
+			$(".meta-info-button a").click(function(){
+	
+				var theWidth = "90%";
+				if(document.documentElement.clientWidth < 900)
+				{
+					theWidth = "100%";
+				}
+	
+				$.colorbox({width:theWidth,href:"index-meta.html"});
+				// var theContent = $( ".meta-info" ).html();
+				// $.colorbox({width:"90%",html:theContent});
+			});
+	
+		});
+	</script>
+	
 </body>
 </html>

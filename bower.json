@@ -15,6 +15,9 @@
     "tests"
   ],
   "dependencies": {
-    "normalize.css": "~3.0.0"
+    "normalize.css": "~3.0.0",
+    "headroom.js": "~0.5.0",
+    "jquery": "~2.1.0",
+    "jquery-colorbox": "~1.5.3"
   }
 }

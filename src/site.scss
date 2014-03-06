@@ -1,6 +1,7 @@
 @import "sass/bourbon/bourbon";
 @import "sass/bitters/bitters";
 @import "sass/neat/neat";
+@import "colorbox.scss";
 
 $mobile: new-breakpoint(max-width 900px 2);
 $mediumscreen: new-breakpoint(max-width 1100px 12);
@@ -27,13 +28,11 @@ a {
 
 h1 {
 	margin: 1em 0 0 0;
-	font-family: "nimbus-sans", sans-serif;
 	font-weight: bold;
 }
 
 h2 {
 	margin: 0 0 0.35em 0;
-	font-family: "nimbus-sans", sans-serif;
 	font-weight: 200;
 	letter-spacing: -0.02em;
 
@@ -106,6 +105,16 @@ nav {
 	@include span-columns(3);
 	@include media($mobile) {
     	@include span-columns(2);
+	}
+
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	top: 15px;
+
+	@include media($mediumscreen) {
+		top: 0px;
 	}
 
 	ol {
@@ -206,12 +215,20 @@ nav {
 	height: auto;
 }
 
+.clients {
+	img {
+		width: 100%;
+		height: auto;
+		border: 1px solid #ededed;
+	}
+	margin-bottom: 1em;
+}
+
 .portfolio--home {
 	@include clearfix;
 	@include media($mobile) {
 		margin-left: 1rem;
 	}
-
 }
 
 .portfolio__item {
@@ -228,10 +245,27 @@ nav {
 		text-align: center;
 		margin: 0;
 		padding: 0.4em 0 0.6em 0;
+		font-weight: bold;
 	}
 }
 
 .portfolio__image {
 	width: 200px;
 	height: auto;
+}
+
+.meta-info {
+	display: none;
+}
+
+.meta-info-button {
+    position:fixed;
+    left:15px;
+    bottom:10px;
+	opacity: 1;
+	transition: all 0.4s linear;
+
+	&.headroom--unpinned {
+		opacity: 0;
+	}
 }

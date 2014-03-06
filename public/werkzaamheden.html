@@ -5,8 +5,8 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/full.min.css">
-	<script type="text/javascript" src="//use.typekit.net/mer2knz.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script src="js/_bower.js"></script>
+	<script src="js/responsive-class.js"></script>
 	
 </head>
 
@@ -51,5 +51,27 @@
 			<p><a href="img/werkwijze-full.png"><img src="img/werkwijze-small.png"></a></p>
 		</div>
 	</div>
+	<div class="meta-info-button">
+		<a href="#meta"><img src="img/question.svg"></a>
+	</div>
+	<script>
+		$( document ).ready(function() {
+			$(".meta-info-button").headroom();
+			$(".meta-info-button a").click(function(){
+	
+				var theWidth = "90%";
+				if(document.documentElement.clientWidth < 900)
+				{
+					theWidth = "100%";
+				}
+	
+				$.colorbox({width:theWidth,href:"index-meta.html"});
+				// var theContent = $( ".meta-info" ).html();
+				// $.colorbox({width:"90%",html:theContent});
+			});
+	
+		});
+	</script>
+	
 </body>
 </html>
