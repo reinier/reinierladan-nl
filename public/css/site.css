@@ -561,6 +561,9 @@ nav {
     margin-bottom: 1em; }
     .content ol li {
       margin-bottom: 0.5em; }
+  .content small {
+    letter-spacing: -0.1em;
+    font-size: 0.7em; }
 
 .content__chapter {
   margin-bottom: 2.5em; }
