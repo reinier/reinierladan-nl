@@ -7,18 +7,27 @@
 	margin-bottom: 1em;
 }
 
+.portfolio {
+	padding-right: 0;
+}
+
 .portfolio--home,
 .portfolio--projecten {
-	@include clearfix;
 	@include media($mobile) {
 		margin-left: 1rem;
 	}
+
+	text-align: justify;
+	text-align-last: justify;
+	display: inline-block;
+	width:100%;
+	content: ""; 
 }
 
 .portfolio__item {
-	float: left;
+	display: inline-block;
 	padding: 0.1em;
-	margin: 0 1.5em 1em 0;
+	margin: 0 0 1em 0;
 	background: #FFF084;
 
 	@include media($mediumscreen) {

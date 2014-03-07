@@ -867,26 +867,25 @@ div.annotation {
     height: auto;
     border: 1px solid #ededed; }
 
+.portfolio {
+  padding-right: 0; }
+
 .portfolio--home,
 .portfolio--projecten {
-  *zoom: 1; }
-  .portfolio--home:before, .portfolio--home:after,
-  .portfolio--projecten:before,
-  .portfolio--projecten:after {
-    content: " ";
-    display: table; }
-  .portfolio--home:after,
-  .portfolio--projecten:after {
-    clear: both; }
+  text-align: justify;
+  text-align-last: justify;
+  display: inline-block;
+  width: 100%;
+  content: ""; }
   @media screen and (max-width: 900px) {
     .portfolio--home,
     .portfolio--projecten {
       margin-left: 1rem; } }
 
 .portfolio__item {
-  float: left;
+  display: inline-block;
   padding: 0.1em;
-  margin: 0 1.5em 1em 0;
+  margin: 0 0 1em 0;
   background: #FFF084; }
   @media screen and (max-width: 1100px) {
     .portfolio__item {
