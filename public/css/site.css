@@ -382,9 +382,7 @@ footer {
       font-size: 1.4em; } }
 
 .header__link-werkzaamheden,
-.header__telefoonnummer,
-.content__link-linkedin,
-.content__chapter a {
+.header__telefoonnummer {
   white-space: nowrap; }
 
 .profile-pic {
@@ -531,6 +529,14 @@ nav {
   background: #F8F8F8;
   color: #E70051;
   padding: 1em; }
+
+.content__link-linkedin,
+.content__chapter a {
+  white-space: nowrap; }
+  @media screen and (max-width: 900px) {
+    .content__link-linkedin,
+    .content__chapter a {
+      white-space: normal; } }
 
 .annotation {
   display: none; }
