@@ -19,9 +19,12 @@
 
 	text-align: justify;
 	text-align-last: justify;
-	display: inline-block;
-	width:100%;
-	content: ""; 
+
+	&::after {
+		display: inline-block;
+		width:100%;
+		content: ""; 
+	}
 }
 
 .portfolio__item {

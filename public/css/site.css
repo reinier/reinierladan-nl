@@ -873,14 +873,16 @@ div.annotation {
 .portfolio--home,
 .portfolio--projecten {
   text-align: justify;
-  text-align-last: justify;
-  display: inline-block;
-  width: 100%;
-  content: ""; }
+  text-align-last: justify; }
   @media screen and (max-width: 900px) {
     .portfolio--home,
     .portfolio--projecten {
       margin-left: 1rem; } }
+  .portfolio--home::after,
+  .portfolio--projecten::after {
+    display: inline-block;
+    width: 100%;
+    content: ""; }
 
 .portfolio__item {
   display: inline-block;
