@@ -1,0 +1,60 @@
+nav {
+	@include span-columns(3);
+	@include media($mobile) {
+    	@include span-columns(2);
+	}
+
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	top: 15px;
+
+	@include media($mediumscreen) {
+		position: static;
+	}
+
+	ol {
+		list-style-type: disc;
+		padding: 1em 0 1em 3em;
+		background: #FFFCCE;
+		border: 1px solid #bfbfbf;
+		border-radius: 0.3em;
+		font-size: 1em;
+
+		@include media($mediumscreen) {
+			padding: 1em 0 1em 1em;
+			list-style-type: none;
+			margin-left: 1em;
+		}
+
+		@include media($mobile) {
+			margin: 0 0 2em 0;
+			text-align: center;
+			padding: 2em 0;
+			border-radius: 0;
+			border: 0px;
+			border-bottom: 1px solid #bfbfbf;
+		}
+
+		li {
+			margin-bottom: 0.4em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@include media($mobile) {
+				list-style-type: none;
+				display: inline-block;
+			}
+
+			a {
+				@include media($mobile) {
+					@include button;
+					font-size: 1.1em;
+				}
+			}
+		}
+	}
+}

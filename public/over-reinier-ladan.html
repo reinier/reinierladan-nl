@@ -4,15 +4,15 @@
 	<title>Reinier Ladan &bull; freelance interactie-ontwerper - over Reinier Ladan</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/full.min.css">
-	<script src="js/_bower.js"></script>
-	<script src="js/responsive-class.js"></script>
+	<link rel="stylesheet" href="/css/full.min.css">
+	<script src="/js/_bower.js"></script>
+	<script src="/js/responsive-class.js"></script>
 	
 </head>
 
 <body>
 		<div class="header">
-			<div class="header__logo"><img src="img/reinier-profiel.png" class="profile-pic"></div>
+			<div class="header__logo"><img src="/img/reinier-profiel.png" class="profile-pic"></div>
 			<div class="header__title">
 				<h1><a href="index.html">Reinier Ladan</a></h1>
 				<p>Ik ontwerp websites en apps. <a href="werkzaamheden.html" class="header__link-werkzaamheden">Meer over wat ik doe »</a><br />
@@ -29,12 +29,12 @@
 	<div class="container">
 		<nav>
 			<ol>
-				<li><a href="index.html"><strong>Ga naar homepage</strong></a></li>
+				<li><a href="/index.html"><strong>Ga naar homepage</strong></a></li>
 				<hr>
-				<li><a href="over-reinier-ladan.html">Over Reinier Ladan</a></li>
-				<li><a href="projecten.html">Projecten</a></li>
-				<li><a href="werkzaamheden.html">Werkzaamheden</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="/over-reinier-ladan.html">Over Reinier Ladan</a></li>
+				<li><a href="/projecten.html">Projecten</a></li>
+				<li><a href="/werkzaamheden.html">Werkzaamheden</a></li>
+				<li><a href="/contact.html">Contact</a></li>
 			</ol>
 		</nav>
 		
@@ -45,25 +45,23 @@
 			<p><a href="img/ervaring-full.png"><img src="img/ervaring-small.png"></a></p>
 		</div>
 	</div>
+	<hr>
+	<footer>
+		<p><em>Informatie over Digital Energy BV: BTW nummer 811020496B01, KvK nummer 24310329, Bankrekening NL65 RABO 0350 2670 49 EUR (deze informatie staat ook altijd op de factuur vermeld)</em></p>
+	</footer>
 	<div class="meta-info-button">
-		<a href="#meta"><img src="img/question.svg"></a>
+		<a href="#meta"><img src="/img/question.svg"></a>
 	</div>
 	<script>
 		$( document ).ready(function() {
-			$(".meta-info-button").headroom();
-			$(".meta-info-button a").click(function(){
-	
-				var theWidth = "90%";
-				if(document.documentElement.clientWidth < 900)
-				{
-					theWidth = "100%";
-				}
-	
-				$.colorbox({width:theWidth,href:"index-meta.html"});
-				// var theContent = $( ".meta-info" ).html();
-				// $.colorbox({width:"90%",html:theContent});
-			});
-	
+			if($('.annotation').length == 0)
+			{
+				$(".meta-info-button").hide();
+			} else {
+				$(".meta-info-button a").click(function(){
+					$(".annotation").toggle();
+				});
+			}
 		});
 	</script>
 	

@@ -1,0 +1,54 @@
+.content {
+	@include span-columns(9);
+	@include media($mobile) {
+    	@include span-columns(2);
+	}
+
+	padding: 0;
+	font-size: 1.3rem;
+
+	h2 {
+		&:first-child {
+			margin-top: 0;
+			padding-top: 0;
+			line-height: 1em;
+		}
+	}
+
+	ol {
+		list-style-type: decimal;
+		margin-left: 2em;
+		margin-bottom: 1em;
+
+		li {
+			margin-bottom: 0.5em;
+		}
+	}
+
+	small {
+		letter-spacing: -0.1em;
+		font-size: 0.7em;
+	}
+}
+
+.content__chapter {
+	margin-bottom: 2.5em;
+}
+
+ .content__chapter--first {
+ 	font-size: 1.2em;
+ 	@include media($mobile) {
+ 		font-size: 1em;
+ 	} 
+ }
+
+ .container {
+	@include outer-container;
+}
+
+.availability {
+	border: 2px solid #E70051;
+	background: #F8F8F8;
+	color: #E70051;
+	padding: 1em;
+}

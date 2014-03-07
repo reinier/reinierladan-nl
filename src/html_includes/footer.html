@@ -1,21 +1,19 @@
+<hr>
+<footer>
+	<p><em>Informatie over Digital Energy BV: BTW nummer 811020496B01, KvK nummer 24310329, Bankrekening NL65 RABO 0350 2670 49 EUR (deze informatie staat ook altijd op de factuur vermeld)</em></p>
+</footer>
 <div class="meta-info-button">
-	<a href="#meta"><img src="img/question.svg"></a>
+	<a href="#meta"><img src="/img/question.svg"></a>
 </div>
 <script>
 	$( document ).ready(function() {
-		$(".meta-info-button").headroom();
-		$(".meta-info-button a").click(function(){
-
-			var theWidth = "90%";
-			if(document.documentElement.clientWidth < 900)
-			{
-				theWidth = "100%";
-			}
-
-			$.colorbox({width:theWidth,href:"index-meta.html"});
-			// var theContent = $( ".meta-info" ).html();
-			// $.colorbox({width:"90%",html:theContent});
-		});
-
+		if($('.annotation').length == 0)
+		{
+			$(".meta-info-button").hide();
+		} else {
+			$(".meta-info-button a").click(function(){
+				$(".annotation").toggle();
+			});
+		}
 	});
 </script>

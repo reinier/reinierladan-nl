@@ -1,0 +1,71 @@
+.header {
+	@include outer-container;
+	@include border-bottom-radius(5px);
+
+	padding-bottom: 1em;
+	margin-bottom: 2em;
+	background-color: #444;
+	color: #fff;
+
+	@include media($mediumscreen) {
+		@include border-bottom-radius(0px);
+	}
+
+	@include media($mobile) {
+		@include border-bottom-radius(0px);
+		margin-bottom: 0;
+	}
+
+	.header__logo {
+		@include span-columns(3);
+		text-align: center;
+		margin-top: 1.8em;
+		@include media($mobile) {
+	    	@include span-columns(2);
+		}
+	}
+	.header__title {
+		@include span-columns(9);
+		@include media($mobile) {
+	    	@include span-columns(2);
+	    	text-align: center;
+		}
+
+		p {
+			font-size: 1.1em;
+		}
+	}
+
+	a {
+		color: #BFE4FF;
+		font-weight: bold;
+	}
+
+	h1 {
+		a {
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+}
+
+.socials {
+	font-size: 1em;
+	padding-top: 0.5em;
+
+	@include media($mobile) {
+		font-size: 1.4em;
+	}
+}
+
+.header__link-werkzaamheden,
+.header__telefoonnummer,
+.content__link-linkedin,
+.content__chapter a {
+	white-space: nowrap;
+}
+
+.profile-pic {
+	width: 150px; /* original size is 300, but downscaled for retina purposes */
+	height: auto;
+}

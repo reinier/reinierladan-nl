@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 	    },
 		watch: {
 			build: {
-				files: ['src/*.scss','src/*.html','src/html_includes/*.html'],
+				files: ['src/*.scss','src/sass/*.scss','src/*.html','src/html_includes/*.html','src/projecten/*.html'],
 				tasks: ['render']
 			},
 		},
@@ -32,7 +32,15 @@ module.exports = function(grunt) {
 			        src: ['*.html'],
 			        dest: './public',
 			        ext: '.html'
-				}]
+				},
+				{
+			        expand: true,
+			        cwd: './src/projecten',
+			        src: ['*.html'],
+			        dest: './public/projecten',
+			        ext: '.html'
+				}
+				]
 	        },
 	    },
 		connect: {
@@ -51,10 +59,6 @@ module.exports = function(grunt) {
 		    exclude: [
 		        'normalize.css'
 		    ],
-			dependencies: {
-		      'headroom': 'jquery',
-		      'jquery-colorbox': 'jquery'
-		    },
 		    bowerOptions: {
 		      relative: false
 		    }

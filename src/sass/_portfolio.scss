@@ -1,0 +1,68 @@
+.clients {
+	img {
+		width: 100%;
+		height: auto;
+		border: 1px solid #ededed;
+	}
+	margin-bottom: 1em;
+}
+
+.portfolio--home,
+.portfolio--projecten {
+	@include clearfix;
+	@include media($mobile) {
+		margin-left: 1rem;
+	}
+}
+
+.portfolio__item {
+	float: left;
+	padding: 0.1em;
+	margin: 0 1.5em 1em 0;
+	background: #FFF084;
+
+	@include media($mediumscreen) {
+		margin-right: 1em;
+	}
+
+	p {
+		text-align: center;
+		margin: 0;
+		padding: 0.4em 0 0.6em 0;
+		font-weight: bold;
+		font-size: 0.8em;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.portfolio__image {
+	width: 200px;
+	height: auto;
+}
+
+.portfolio--meer {
+	padding: 2em 0;
+}
+
+.portfolio--page {
+	h2 {
+		margin-bottom: 1em;
+	}
+
+	.clients {
+		margin-bottom: 2em;
+	}
+
+	p {
+		line-height: 1.7em;
+
+	}
+
+	.portfolio__item {
+		font-size: 1.2em;
+		padding: 0.4em;
+	}
+}
