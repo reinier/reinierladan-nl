@@ -51,6 +51,10 @@
 	background: #F8F8F8;
 	color: #E70051;
 	padding: 1em;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .content__link-linkedin,
