@@ -529,6 +529,12 @@ nav {
   background: #F8F8F8;
   color: #E70051;
   padding: 1em; }
+  @media screen and (max-width: 900px) {
+    .availability {
+      border-left: 0;
+      border-right: 0;
+      padding-left: 0;
+      padding-right: 0; } }
   .availability p:last-child {
     margin-bottom: 0; }
 
