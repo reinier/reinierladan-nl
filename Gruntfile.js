@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 	    },
 		watch: {
 			build: {
-				files: ['src/*.scss','src/sass/*.scss','src/*.html','src/html_includes/*.html','src/projecten/*.html'],
+				files: ['src/*.scss','src/sass/*.scss','src/*.html','src/html_includes/*.html','src/projecten/*.html','src/projecten/*.md'],
 				tasks: ['render']
 			},
 		},
@@ -63,10 +63,26 @@ module.exports = function(grunt) {
 		      relative: false
 		    }
 		  }
+		},
+		markdown: {
+			all: {
+				files: [
+				{
+					expand: true,
+					cwd: './src/projecten',
+					src: ['*.md'],
+					dest: './src/projecten/.tmp/',
+					ext: '.html'
+				}
+				],
+				options: {
+					template: './src/projecten/markdowntemplate.jst'
+				}
+			}
 		}
 	});
 
 	grunt.registerTask('default',['watch:build']);
-	grunt.registerTask('render',['sass','cssmin','bake','bower_concat']);
+	grunt.registerTask('render',['sass','cssmin','markdown','bake','bower_concat']);
 	grunt.registerTask('serve', ['connect:server','default']);
 };

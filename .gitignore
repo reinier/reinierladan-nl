@@ -25,3 +25,5 @@ node_modules
 src/sass/bourbon
 src/sass/neat
 src/sass/bitters
+
+/src/projecten/.tmp/
