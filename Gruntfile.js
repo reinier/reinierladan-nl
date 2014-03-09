@@ -71,12 +71,17 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: './src/projecten',
 					src: ['*.md'],
-					dest: './src/projecten/.tmp/',
+					dest: './src/projecten/',
 					ext: '.html'
 				}
 				],
 				options: {
-					template: './src/projecten/markdowntemplate.jst'
+					template: './src/projecten/markdowntemplate.html',
+					preCompile: function(src, context) {
+						var title = src.split('\n')[0];
+						title = title.replace('## ','');
+						context.title = title;
+					}
 				}
 			}
 		}

@@ -1,3 +1,5 @@
+## Project: Adformatie 
+
 De nieuwe Adformatiewebsite is het resultaat van een samensmelting van diverse titels: Adformatie, Marketing Online en Communicatie. De behoefte bij de Adformatie groep bestond om de titels binnen hetzelfde systeem te laten werken en ieder eenzelfde soort site te geven waarbij wel ruimte zou zijn voor een eigen identiteit. Het uiteindelijke resultaat is dat de drie titels hun eigen branding hebben gehouden maar met dezelfde templates werken.
 
 Daarnaast is de stap gezet om de website volledig responsive te maken. Er zijn nieuwe templates voor de homepage gemaakt, voor artikelen en informatie over de auteurs heeft een belangrijke plek gekregen binnen het geheel.
