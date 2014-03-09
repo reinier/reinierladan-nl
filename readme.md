@@ -24,9 +24,9 @@ Follow the development of this site on [beta.reinierladan.nl](http://beta.reinie
     npm install
 ```
 
-- Then you are ready to startup Grunt in the root directory to watch for scss changes: `grunt`
-- Whenever you edit and save `src/site.scss` or an html file in `src/` Grunt will compile the correct files for you inside `public/`
-- That's pretty much it. Now you can view the site by opening `public/index.html`.
+- Then you are ready to startup Grunt in the root directory to watch for changes and compile them: `grunt serve`
+- Whenever you edit and save `.scss` files, markdown files or html files in `src/` Grunt will compile the correct files for you inside `public/`
+- That's pretty much it.
 
 ## Thanks to
 (this site makes use of the following libs…)
