@@ -6,11 +6,11 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		sass: {
 			build: {
-		        files: {
-		            './public/css/site.css': './src/site.scss'
-		        }
-		    }
-	    },
+				files: {
+					'./public/css/site.css': './src/site.scss'
+				}
+			}
+		},
 		watch: {
 			build: {
 				files: ['src/*.scss','src/sass/*.scss','src/*.html','src/html_includes/*.html','src/projecten/*.html','src/projecten/*.md'],
@@ -25,44 +25,44 @@ module.exports = function(grunt) {
 			}
 		},
 		bake: {
-	        build: {
-	            files: [{
-			        expand: true,
-			        cwd: './src',
-			        src: ['*.html'],
-			        dest: './public',
-			        ext: '.html'
+			build: {
+				files: [{
+					expand: true,
+					cwd: './src',
+					src: ['*.html'],
+					dest: './public',
+					ext: '.html'
 				},
 				{
-			        expand: true,
-			        cwd: './src/projecten',
-			        src: ['*.html'],
-			        dest: './public/projecten',
-			        ext: '.html'
+					expand: true,
+					cwd: './src/projecten',
+					src: ['*.html'],
+					dest: './public/projecten',
+					ext: '.html'
 				}
 				]
-	        },
-	    },
+			},
+		},
 		connect: {
-            server: {
-                options: {
-                    port: 8000,
-                    hostname: '0.0.0.0',
-                    base: './public',
-                    open: true
-                }
-            }
-        },
+			server: {
+				options: {
+					port: 8000,
+					hostname: '0.0.0.0',
+					base: './public',
+					open: true
+				}
+			}
+		},
 		bower_concat: {
-		  all: {
-		    dest: './public/js/_bower.js',
-		    exclude: [
-		        'normalize.css'
-		    ],
-		    bowerOptions: {
-		      relative: false
-		    }
-		  }
+			all: {
+				dest: './public/js/_bower.js',
+				exclude: [
+				'normalize.css'
+				],
+				bowerOptions: {
+					relative: false
+				}
+			}
 		},
 		markdown: {
 			all: {
