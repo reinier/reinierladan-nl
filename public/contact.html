@@ -63,18 +63,7 @@
 	<div class="meta-info-button">
 		<a href="#meta"><img src="/img/question.svg"></a>
 	</div>
-	<script>
-		$( document ).ready(function() {
-			if($('.annotation').length == 0)
-			{
-				$(".meta-info-button").hide();
-			} else {
-				$(".meta-info-button a").click(function(){
-					$(".annotation").toggle();
-				});
-			}
-		});
-	</script>
+	<script src="/js/annotations.js"></script>
 	
 </body>
 </html>

@@ -14,15 +14,15 @@ module.exports = function(grunt) {
 		watch: {
 			sass: {
 				files: ['src/*.scss','src/sass/*.scss'],
-				tasks: ['render']
+				tasks: ['sass','cssmin']
 			},
 			html: {
 				files: ['src/*.html','src/html_includes/*.html'],
-				tasks: ['render']
+				tasks: ['bake']
 			},
 			markdown: {
 				files: ['src/projecten/*.md'],
-				tasks: ['render']
+				tasks: ['markdown','bake']
 			},
 
 		},
