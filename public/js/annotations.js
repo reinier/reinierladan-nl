@@ -4,7 +4,16 @@ $( document ).ready(function() {
 		$(".meta-info-button").hide();
 	} else {
 		$(".meta-info-button a").click(function(){
-			$(".annotation").toggle();
+
+			if($(this).hasClass('show-annotations')){
+				$(this).removeClass('show-annotations');
+				$(this).find('img').attr('src','/img/question.svg');
+				$(".annotation").hide();
+			} else {
+				$(this).addClass('show-annotations');
+				$(this).find('img').attr('src','/img/annotate-close.svg');
+				$(".annotation").show();
+			}
 
 			$('html, body').animate({
 				scrollTop: $(".annotation").first().offset().top
