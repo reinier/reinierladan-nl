@@ -1,4 +1,4 @@
-## Project: NOS App
+## Project: NOS Apps
 
 Met de NOS app is de eerste goede stap gezet om het NOS nieuws volledig native naar iOS, Android en Windows Phone te brengen. Tijdens het ontwerpproces is er gezocht naar een eigen ontwerptaal die hetzelfde gevoel moet overbrengen door alle platformen heen zonder dat de unieke eigenschappen van de systemen overboord hoeven te worden gegooid.
 

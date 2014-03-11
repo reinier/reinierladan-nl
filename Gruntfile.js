@@ -12,10 +12,19 @@ module.exports = function(grunt) {
 			}
 		},
 		watch: {
-			build: {
-				files: ['src/*.scss','src/sass/*.scss','src/*.html','src/html_includes/*.html','src/projecten/*.html','src/projecten/*.md'],
+			sass: {
+				files: ['src/*.scss','src/sass/*.scss'],
 				tasks: ['render']
 			},
+			html: {
+				files: ['src/*.html','src/html_includes/*.html'],
+				tasks: ['render']
+			},
+			markdown: {
+				files: ['src/projecten/*.md'],
+				tasks: ['render']
+			},
+
 		},
 		cssmin: {
 			combine: {
@@ -35,7 +44,7 @@ module.exports = function(grunt) {
 				},
 				{
 					expand: true,
-					cwd: './src/projecten',
+					cwd: './src/projecten/.tmp',
 					src: ['*.html'],
 					dest: './public/projecten',
 					ext: '.html'
@@ -71,7 +80,7 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: './src/projecten',
 					src: ['*.md'],
-					dest: './src/projecten/',
+					dest: './src/projecten/.tmp/',
 					ext: '.html'
 				}
 				],
@@ -87,7 +96,7 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.registerTask('default',['watch:build']);
+	grunt.registerTask('default',['watch']);
 	grunt.registerTask('render',['sass','cssmin','markdown','bake','bower_concat']);
 	grunt.registerTask('serve', ['connect:server','default']);
 };
