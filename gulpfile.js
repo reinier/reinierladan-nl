@@ -78,7 +78,6 @@ gulp.task('templates', function() {
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['styles']);
   gulp.watch(paths.html, ['templates']);
-	gulp.watch('./app/html/**/*.swig', ['templates']);
 });
 
 gulp.task('connect', connect.server({
