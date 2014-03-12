@@ -2,28 +2,12 @@
 .DS_Store
 profile
 
-# xcode noise
-build/*
-*.mode1
-*.mode1v3
-*.mode2v3
-*.perspective
-*.perspectivev3
-*.pbxuser
-*.xcworkspace
-xcuserdata
-
-# svn & cvs
-.svn
-CVS
-
-# Project specific
+# Project
 .sass-cache
-bower_components
+bower_modules
 node_modules
+.tmp
 
-src/sass/bourbon
-src/sass/neat
-src/sass/bitters
-
-/src/projecten/.tmp/
+user_modules/bourbon
+user_modules/neat
+user_modules/bitters

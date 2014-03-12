@@ -1,0 +1,13 @@
+## Project: NOS op 3
+
+NOS op 3 is het laboratorium voor de jonge garde van de NOS. De website moet dat uitstralen en een platform zijn voor nieuwe ontwikkeling en vernieuwende journalistiek. De afdeling is erg open met wat ze doen op een dag, gaan het gesprek aan met de achterban en spelen met de vorm van nieuws.
+
+Met een aantal stakeholders van de afdeling heb ik diverse ideeën besproken en uitgeschetst. De huidige website bevat een door de redactie zelf in te delen vorm voor de voorpagina, een "labs" gedeelte waarin vrij geëxperimenteerd kan worden en een overzicht van wie er op de redactie zijn. Er zijn diverse templates om nieuws in te gieten en vragen aan de achterban te stellen.
+
+Ik was verantwoordelijk voor het interactie-ontwerp. Het grafisch ontwerp is verzorgd door [Stylishmedia](http://www.stylishmedia.com).
+
+Bekijk de website: [NOS op 3](http://nos.nl/op3)
+
+![NOS op 3 voorbeeld 1](/images/portfolio/nosop3-item1.jpg)
+![NOS op 3 voorbeeld 2](/images/portfolio/nosop3-item2.jpg)
+![NOS op 3 voorbeeld 3](/images/portfolio/nosop3-item3.jpg)

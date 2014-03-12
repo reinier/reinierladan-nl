@@ -7,13 +7,11 @@
     "grunt-contrib-sass": "~0.7.2",
     "grunt-contrib-concat": "^0.3.0",
     "grunt-contrib-cssmin": "^0.8.0",
+    "grunt-contrib-copy": "~0.4.1",
     "grunt-bake": "^0.3.8",
     "load-grunt-tasks": "~0.4.0",
     "grunt-contrib-connect": "~0.7.1",
     "grunt-bower-concat": "^0.2.4",
     "grunt-markdown": "^0.5.0"
-  },
-  "scripts": {
-    "postinstall": "grunt render"
   }
 }

@@ -7,29 +7,35 @@ module.exports = function(grunt) {
 		sass: {
 			build: {
 				files: {
-					'./public/css/site.css': './src/site.scss'
+					'./public/styles/site.css': './app/styles/site.scss'
 				}
 			}
-		},
-		watch: {
-			sass: {
-				files: ['src/*.scss','src/sass/*.scss'],
-				tasks: ['sass','cssmin']
-			},
-			html: {
-				files: ['src/*.html','src/html_includes/*.html'],
-				tasks: ['bake']
-			},
-			markdown: {
-				files: ['src/projecten/*.md'],
-				tasks: ['markdown','bake']
-			},
-
 		},
 		cssmin: {
 			combine: {
 				files: {
-					'./public/css/full.min.css': ['./bower_components/normalize.css/normalize.css','./src/user_components/stackicons-social-minimal.min.css','./public/css/site.css']
+					'./public/styles/full.min.css': ['./bower_modules/normalize.css/normalize.css','./user_modules/Stackicons/stackicons-social-minimal.min.css','./public/styles/site.css']
+				}
+			}
+		},
+		markdown: {
+			all: {
+				files: [
+				{
+					expand: true,
+					cwd: './app/pages/projecten',
+					src: ['*.md'],
+					dest: './.tmp/',
+					ext: '.html'
+				}
+				],
+				options: {
+					template: './app/pages/projecten/_markdowntemplate.html',
+					preCompile: function(src, context) {
+						var title = src.split('\n')[0];
+						title = title.replace('## ','');
+						context.title = title;
+					}
 				}
 			}
 		},
@@ -37,20 +43,45 @@ module.exports = function(grunt) {
 			build: {
 				files: [{
 					expand: true,
-					cwd: './src',
+					cwd: './app',
 					src: ['*.html'],
 					dest: './public',
 					ext: '.html'
 				},
 				{
 					expand: true,
-					cwd: './src/projecten/.tmp',
+					cwd: './app/pages',
 					src: ['*.html'],
-					dest: './public/projecten',
+					dest: './public/pages',
+					ext: '.html'
+				},
+				{
+					expand: true,
+					cwd: './.tmp',
+					src: ['*.html'],
+					dest: './public/pages/projecten',
 					ext: '.html'
 				}
 				]
 			},
+		},
+		watch: {
+			sass: {
+				files: ['app/styles/*.scss'],
+				tasks: ['sass','cssmin']
+			},
+			html: {
+				files: ['app/{,*/}*.html'],
+				tasks: ['bake']
+			},
+			markdown: {
+			files: ['app/pages/{,*/}*.md'],
+				tasks: ['markdown','bake']
+			},
+			js: {
+			files: ['app/{,*/}*.js'],
+				tasks: ['copy']
+			}
 		},
 		connect: {
 			server: {
@@ -64,39 +95,32 @@ module.exports = function(grunt) {
 		},
 		bower_concat: {
 			all: {
-				dest: './public/js/_bower.js',
-				exclude: [
-				'normalize.css'
-				],
+				dest: './public/javascript/_bower.js',
+				exclude: ['normalize.css'],
 				bowerOptions: {
 					relative: false
 				}
 			}
 		},
-		markdown: {
-			all: {
-				files: [
-				{
-					expand: true,
-					cwd: './src/projecten',
-					src: ['*.md'],
-					dest: './src/projecten/.tmp/',
-					ext: '.html'
-				}
-				],
-				options: {
-					template: './src/projecten/markdowntemplate.html',
-					preCompile: function(src, context) {
-						var title = src.split('\n')[0];
-						title = title.replace('## ','');
-						context.title = title;
-					}
-				}
-			}
-		}
+        copy: {
+            dist: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: './app/',
+                    dest: './public/',
+                    src: [
+                        'javascript/{,*/}*.js',
+						'images/{,*/}*.*',
+                        'fonts/{,*/}*.*'
+                    ]
+                }]
+            }
+        },
 	});
 
-	grunt.registerTask('default',['watch']);
-	grunt.registerTask('render',['sass','cssmin','markdown','bake','bower_concat']);
-	grunt.registerTask('serve', ['connect:server','default']);
+	grunt.registerTask('default',['render','watch']);
+	grunt.registerTask('init',['bower_concat','copy']);
+	grunt.registerTask('render',['init','sass','cssmin','markdown','bake']);
+	grunt.registerTask('serve', ['render','connect:server','watch']);
 };
