@@ -16,19 +16,17 @@ Follow the development of this site on [beta.reinierladan.nl](http://beta.reinie
 - Run the following inside the project root:
 ```bash
     bower install
-    cd src/sass/
+    cd user_modules/
     bourbon install
     neat install
     bitters install
-    cd ../../
+    cd ../
     npm install
 ```
 
 - Then you are ready to startup Grunt in the root directory to watch for changes and compile them: `grunt serve`
-- Whenever you edit and save `.scss` files, markdown files or html files in `src/` Grunt will compile the correct files for you inside `public/`
-- That's pretty much it.
 
 ## Thanks to
 (this site makes use of the following libs…)
 - [Normalize.css](http://git.io/normalize)
-- [StackIcons](http://stackicons.com) (not trough Bower yet, so copied it from source)
+- [StackIcons](http://stackicons.com) (not through Bower yet, so copied it from source)
