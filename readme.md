@@ -3,12 +3,9 @@
 Follow the development of this site on [beta.reinierladan.nl](http://beta.reinierladan.nl)
 
 ## Requirements
-- [Grunt](http://gruntjs.com)
+- [Gulp](http://gulpjs.com)
 - [Bower](http://bower.io)
 - [Sass](http://sass-lang.com)
-- [Bourbon](http://bourbon.io) (Sass extension)
-- [Neat](http://neat.bourbon.io) (Bourbon extension)
-- [Bitters](http://bitters.bourbon.io) (Bourbon extension)
 - And maybe stuff needed to run the listed things
 
 ## Quick setup
@@ -16,15 +13,10 @@ Follow the development of this site on [beta.reinierladan.nl](http://beta.reinie
 - Run the following inside the project root:
 ```bash
     bower install
-    cd user_modules/
-    bourbon install
-    neat install
-    bitters install
-    cd ../
     npm install
 ```
 
-- Then you are ready to startup Grunt in the root directory to watch for changes and compile them: `grunt serve`
+- Then you are ready to startup Gulp in the root directory to watch for changes and compile them: `gulp` - The test site will be at [0.0.0.0:3000](http://0.0.0.0:3000)
 
 ## Thanks to
 (this site makes use of the following libs…)

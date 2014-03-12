@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+{% include "./_partials/head.html" %}
+<body>
+{% include "./_partials/header.html" %}
+	<div class="container">
+		<nav>
+			<ol>
+				{% if showLinkToHome %}
+					<li><a href="/index.html"><strong>Ga naar homepage</strong></a></li>
+					<hr>
+				{% endif %}
+				<li><a href="/over-reinier-ladan.html">Over Reinier Ladan</a></li>
+				<li><a href="/projecten.html">Projecten</a></li>
+				<li><a href="/werkzaamheden.html">Werkzaamheden</a></li>
+				<li><a href="/contact.html">Contact</a></li>
+			</ol>
+		</nav>
+		{% block content %}{% endblock %}
+	</div>
+	{% include "./_partials/footer.html" %}
+
+</body>
+</html>

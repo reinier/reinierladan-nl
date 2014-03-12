@@ -1,6 +1,6 @@
-@import "../../user_modules/bourbon/bourbon";
-@import "../../user_modules/bitters/bitters";
-@import "../../user_modules/neat/neat";
+@import "bourbon";
+@import "bitters";
+@import "neat"; 
 
 $mobile: new-breakpoint(max-width 900px 2);
 $mediumscreen: new-breakpoint(max-width 1100px 12);
