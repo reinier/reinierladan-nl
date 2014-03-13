@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Reinier Ladan &bull; Freelance interactie-ontwerper - Over mij</title>
+	<title>{% block title %}Reinier Ladan &bull; Freelance interactie-ontwerper{% endblock %}</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/styles/full.min.css">
@@ -13,7 +13,7 @@
 		<div class="header__logo"><img src="/images/reinier-profiel.png" class="profile-pic"></div>
 		<div class="header__title">
 			<h1><a href="/index.html">Reinier Ladan</a></h1>
-			<p>Ik ontwerp websites en apps. <a href="/werkzaamheden.html" class="header__link-werkzaamheden">Meer over wat ik doe »</a><br /><strong>Mailen kan op <a href="mailto:reinier@digitalenergy.nl">reinier@digitalenergy.nl</a> en bellen op <span class="header__telefoonnummer">06 2487 2725</span>.</strong></p>
+			<p>Ik ontwerp websites en apps. <a href="/pages/werkzaamheden.html" class="header__link-werkzaamheden">Meer over wat ik doe »</a><br /><strong>Mailen kan op <a href="mailto:reinier@digitalenergy.nl">reinier@digitalenergy.nl</a> en bellen op <span class="header__telefoonnummer">06 2487 2725</span>.</strong></p>
 			<div class="socials st-multi-color">
 				<a title="LinkedIn Reinier Ladan" class="st-icon-linkedin" href="http://nl.linkedin.com/in/reinierladan/"><span></span>LinkedIn</a>
 				<a title="GitHub reinier" class="st-icon-github" href="https://github.com/reinier"><span></span>Github</a>
@@ -28,23 +28,18 @@
 		
 		<nav id="navigation">
 			<ol>
-				
+				{% if showLinkToHome %}
 					<li class="go-to-home"><a href="/index.html"><strong>Ga naar homepage</strong></a></li>
-				
-				<li><a href="/over-reinier-ladan.html">Over Reinier Ladan</a></li>
-				<li><a href="/projecten.html">Projecten</a></li>
-				<li><a href="/werkzaamheden.html">Werkzaamheden</a></li>
-				<li><a href="/contact.html">Contact</a></li>
+				{% endif %}
+				<li><a href="/pages/over-reinier-ladan.html">Over Reinier Ladan</a></li>
+				<li><a href="/pages/projecten.html">Projecten</a></li>
+				<li><a href="/pages/werkzaamheden.html">Werkzaamheden</a></li>
+				<li><a href="/pages/contact.html">Contact</a></li>
 			</ol>
 		</nav>
-		
-<div class="content">
-	<h2 id="over-reinier-ladan">Over Reinier Ladan</h2>
-	<p>Zoals op <a href="/index.html">de homepage</a> al vermeld kijk ik graag films, loop ik graag hard en golf ik graag. Verder doe ik een periodiek terugkerende podcast genaamd <a href="http://appelsenperenshow.nl">Appels en Peren</a> met Wietse Hage over Apple, technologie, gadgets en alles wat er maar bij komt kijken.</p>
-	<p>Mijn professionele carriere begon in 1999 met het maken van diverse sites voor middenstanders. Naast dat ik al lange tijd in het vak zit heb ik ook een Bachelor in 'Communicatie- en Multimediadesign' en heb ik veel ervaring met programmeren en het in elkaar hacken van prototypes. Hierdoor ben ik goed in staat te 'ontwerpen in de browser' zodat ontwerpproces en bouwproces in elkaar gevlochten kunnen worden wat mij betreft.</p>
-	<p><a href="/images/ervaring-full.png"><img src="/images/ervaring-small.png"></a></p>
-</div>
-
+		{% block content %}
+			<p>Deze pagina is leeg.</p>
+		{% endblock %}
 	</div>
 	<hr>
 	<footer>

@@ -30,8 +30,8 @@ var paths = {
   javascript: 'app/javascript/**/*.js',
   bowerfiles: 'bower_modules/jquery/dist/jquery.min.js',
   fonts:      'app/fonts/**/*',
-  html:       'app/html/**/*.html',
-  content:    ['app/html/**/*.html','!./app/html/_*','!./app/html/_partials/*']
+  html:       'app/**/*.html',
+  content:    ['app/**/*.html','!./app/layout/*']
 };
 
 gulp.task('styles', function() {
