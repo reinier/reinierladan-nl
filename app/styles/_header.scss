@@ -16,33 +16,16 @@
 		margin-bottom: 2em;
 	}
 
-	.header__logo {
-		@include span-columns(3);
-		text-align: center;
-		margin-top: 1.8em;
-		@include media($mobile) {
-	    	@include span-columns(2);
-		}
-	}
-	
-	.header__title {
-		@include span-columns(9);
-		@include media($mobile) {
-	    	@include span-columns(2);
-	    	text-align: center;
-		}
-
-		p {
-			font-size: 1.1em;
-		}
-	}
-
 	a {
 		color: #BFE4FF;
 		font-weight: bold;
 	}
 
 	h1 {
+		@include media($mobile) {
+			margin-top: 0;
+		}
+
 		a {
 			text-decoration: none;
 			color: #fff;
@@ -50,10 +33,27 @@
 				text-decoration: underline;
 			}
 		}
+	}
+}
 
-		@include media($mobile) {
-			margin-top: 0;
-		}
+.header__logo {
+	@include span-columns(3);
+	text-align: center;
+	margin-top: 1.8em;
+	@include media($mobile) {
+    	@include span-columns(2);
+	}
+}
+
+.header__title {
+	@include span-columns(9);
+	@include media($mobile) {
+    	@include span-columns(2);
+    	text-align: center;
+	}
+
+	p {
+		font-size: 1.1em;
 	}
 }
 

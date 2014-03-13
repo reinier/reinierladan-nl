@@ -84,6 +84,15 @@ nav {
 		li {
 			margin-bottom: 0.4em;
 
+			@include media($mobile) {
+				list-style-type: none;
+				display: inline-block;
+				
+				&.go-to-home {
+					display: block;
+				}
+			}
+
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -93,15 +102,6 @@ nav {
 					@include button;
 					font-size: 1.1em;
 					font-weight: normal;
-				}
-			}
-
-			@include media($mobile) {
-				list-style-type: none;
-				display: inline-block;
-				
-				&.go-to-home {
-					display: block;
 				}
 			}
 		}

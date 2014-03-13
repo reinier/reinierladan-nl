@@ -1,10 +1,11 @@
 .clients {
+	margin-bottom: 1em;
+
 	img {
 		width: 100%;
 		height: auto;
 		border: 1px solid #ededed;
 	}
-	margin-bottom: 1em;
 }
 
 .portfolio {
@@ -13,12 +14,12 @@
 
 .portfolio--home,
 .portfolio--projecten {
+	text-align: justify;
+	text-align-last: justify;
+
 	@include media($mobile) {
 		margin-left: 1rem;
 	}
-
-	text-align: justify;
-	text-align-last: justify;
 
 	&::after {
 		display: inline-block;
@@ -64,13 +65,12 @@
 		margin-bottom: 1em;
 	}
 
-	.clients {
-		margin-bottom: 2em;
-	}
-
 	p {
 		line-height: 1.7em;
+	}
 
+	.clients {
+		margin-bottom: 2em;
 	}
 
 	.portfolio__item {

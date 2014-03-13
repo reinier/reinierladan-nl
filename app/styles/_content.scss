@@ -51,6 +51,7 @@
 	background: #F8F8F8;
 	color: #E70051;
 	padding: 1em;
+
 	@include media($mobile) {
  		border-left: 0;
  		border-right: 0;
@@ -66,6 +67,7 @@
 .content__link-linkedin,
 .content__chapter a {
 	white-space: nowrap;
+	
 	@include media($mobile) {
  		white-space: normal;
  	} 

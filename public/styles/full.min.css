@@ -720,53 +720,55 @@ footer {
       border-bottom-left-radius: 0px;
       border-bottom-right-radius: 0px;
       margin-bottom: 2em; } }
-  .header .header__logo {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%;
-    text-align: center;
-    margin-top: 1.8em; }
-    .header .header__logo:last-child {
-      margin-right: 0; }
-    @media screen and (max-width: 900px) {
-      .header .header__logo {
-        float: left;
-        display: block;
-        margin-right: 16.03631%;
-        width: 100%; }
-        .header .header__logo:last-child {
-          margin-right: 0; } }
-  .header .header__title {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 74.41059%; }
-    .header .header__title:last-child {
-      margin-right: 0; }
-    @media screen and (max-width: 900px) {
-      .header .header__title {
-        float: left;
-        display: block;
-        margin-right: 16.03631%;
-        width: 100%;
-        text-align: center; }
-        .header .header__title:last-child {
-          margin-right: 0; } }
-    .header .header__title p {
-      font-size: 1.1em; }
   .header a {
     color: #BFE4FF;
     font-weight: bold; }
+  @media screen and (max-width: 900px) {
+    .header h1 {
+      margin-top: 0; } }
   .header h1 a {
     text-decoration: none;
     color: #fff; }
     @media screen and (max-width: 900px) {
       .header h1 a {
         text-decoration: underline; } }
+
+.header__logo {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  text-align: center;
+  margin-top: 1.8em; }
+  .header__logo:last-child {
+    margin-right: 0; }
   @media screen and (max-width: 900px) {
-    .header h1 {
-      margin-top: 0; } }
+    .header__logo {
+      float: left;
+      display: block;
+      margin-right: 16.03631%;
+      width: 100%; }
+      .header__logo:last-child {
+        margin-right: 0; } }
+
+.header__title {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%; }
+  .header__title:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 900px) {
+    .header__title {
+      float: left;
+      display: block;
+      margin-right: 16.03631%;
+      width: 100%;
+      text-align: center; }
+      .header__title:last-child {
+        margin-right: 0; } }
+  .header__title p {
+    font-size: 1.1em; }
 
 .socials {
   font-size: 1em;
@@ -867,6 +869,12 @@ nav {
         border-bottom: 1px solid #bfbfbf; } }
     nav ol li {
       margin-bottom: 0.4em; }
+      @media screen and (max-width: 900px) {
+        nav ol li {
+          list-style-type: none;
+          display: inline-block; }
+          nav ol li.go-to-home {
+            display: block; } }
       nav ol li:last-child {
         margin-bottom: 0; }
       @media screen and (max-width: 900px) {
@@ -899,12 +907,6 @@ nav {
           nav ol li a:disabled {
             opacity: 0.5;
             cursor: not-allowed; } }
-      @media screen and (max-width: 900px) {
-        nav ol li {
-          list-style-type: none;
-          display: inline-block; }
-          nav ol li.go-to-home {
-            display: block; } }
 
 .content {
   float: left;
@@ -975,6 +977,88 @@ nav {
     .content__link-linkedin, .content__chapter a {
       white-space: normal; } }
 
+.clients {
+  margin-bottom: 1em; }
+  .clients img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ededed; }
+
+.portfolio {
+  padding-right: 0; }
+
+.portfolio--home, .portfolio--projecten {
+  text-align: justify;
+  text-align-last: justify; }
+  @media screen and (max-width: 900px) {
+    .portfolio--home, .portfolio--projecten {
+      margin-left: 1rem; } }
+  .portfolio--home::after, .portfolio--projecten::after {
+    display: inline-block;
+    width: 100%;
+    content: ""; }
+
+.portfolio__item {
+  display: inline-block;
+  padding: 0.1em;
+  margin: 0 0 1em 0;
+  background: #FFF084; }
+  @media screen and (max-width: 1100px) {
+    .portfolio__item {
+      margin-right: 1em; } }
+  .portfolio__item p {
+    text-align: center;
+    margin: 0;
+    padding: 0.4em 0 0.6em 0;
+    font-weight: bold;
+    font-size: 0.8em; }
+  .portfolio__item a {
+    text-decoration: none; }
+
+.portfolio__image {
+  width: 200px;
+  height: auto; }
+
+.portfolio--meer {
+  padding: 2em 0; }
+
+.portfolio--page h2 {
+  margin-bottom: 1em; }
+.portfolio--page p {
+  line-height: 1.7em; }
+.portfolio--page .clients {
+  margin-bottom: 2em; }
+.portfolio--page .portfolio__item {
+  font-size: 1.2em;
+  padding: 0.4em; }
+
+.scrumcard {
+  background-color: #D6F2FF;
+  padding: 1em;
+  border: 3px solid #444; }
+  @media screen and (max-width: 900px) {
+    .scrumcard {
+      border: 0; } }
+  .scrumcard ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+  .scrumcard li {
+    list-style-type: none; }
+    .scrumcard li p {
+      font-size: 0.7em;
+      color: #777;
+      margin: 0 0 0.5em;
+      padding: 0;
+      font-style: italic; }
+    .scrumcard li span {
+      float: right;
+      color: #FF0045; }
+      @media screen and (max-width: 1100px) {
+        .scrumcard li span {
+          float: none;
+          display: block; } }
+
 .annotation {
   display: none; }
 
@@ -988,14 +1072,14 @@ div.annotation {
   color: #000FF9;
   padding: 1em;
   margin-bottom: 1em; }
-  div.annotation p:last-child {
-    margin-bottom: 0; }
-  div.annotation a {
-    color: #D90B05; }
   @media screen and (max-width: 900px) {
     div.annotation {
       border-right: 0;
       border-left: 0; } }
+  div.annotation p:last-child {
+    margin-bottom: 0; }
+  div.annotation a {
+    color: #D90B05; }
 
 .meta-info-button {
   position: fixed;
@@ -1003,8 +1087,6 @@ div.annotation {
   bottom: 10px;
   opacity: 1;
   transition: all 0.4s linear; }
-  .meta-info-button.headroom--unpinned {
-    opacity: 0; }
 
 .spinner {
   margin-bottom: 1em; }
@@ -1292,85 +1374,3 @@ div.annotation {
 
   100% {
     margin-top: -28em; } }
-
-.clients {
-  margin-bottom: 1em; }
-  .clients img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ededed; }
-
-.portfolio {
-  padding-right: 0; }
-
-.portfolio--home, .portfolio--projecten {
-  text-align: justify;
-  text-align-last: justify; }
-  @media screen and (max-width: 900px) {
-    .portfolio--home, .portfolio--projecten {
-      margin-left: 1rem; } }
-  .portfolio--home::after, .portfolio--projecten::after {
-    display: inline-block;
-    width: 100%;
-    content: ""; }
-
-.portfolio__item {
-  display: inline-block;
-  padding: 0.1em;
-  margin: 0 0 1em 0;
-  background: #FFF084; }
-  @media screen and (max-width: 1100px) {
-    .portfolio__item {
-      margin-right: 1em; } }
-  .portfolio__item p {
-    text-align: center;
-    margin: 0;
-    padding: 0.4em 0 0.6em 0;
-    font-weight: bold;
-    font-size: 0.8em; }
-  .portfolio__item a {
-    text-decoration: none; }
-
-.portfolio__image {
-  width: 200px;
-  height: auto; }
-
-.portfolio--meer {
-  padding: 2em 0; }
-
-.portfolio--page h2 {
-  margin-bottom: 1em; }
-.portfolio--page .clients {
-  margin-bottom: 2em; }
-.portfolio--page p {
-  line-height: 1.7em; }
-.portfolio--page .portfolio__item {
-  font-size: 1.2em;
-  padding: 0.4em; }
-
-.scrumcard {
-  background-color: #D6F2FF;
-  padding: 1em;
-  border: 3px solid #444; }
-  @media screen and (max-width: 900px) {
-    .scrumcard {
-      border: 0; } }
-  .scrumcard ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none; }
-  .scrumcard li {
-    list-style-type: none; }
-    .scrumcard li p {
-      font-size: 0.7em;
-      color: #777;
-      margin: 0 0 0.5em;
-      padding: 0;
-      font-style: italic; }
-    .scrumcard li span {
-      float: right;
-      color: #FF0045; }
-      @media screen and (max-width: 1100px) {
-        .scrumcard li span {
-          float: none;
-          display: block; } }
