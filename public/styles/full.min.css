@@ -822,7 +822,8 @@ nav {
       display: block;
       margin-right: 16.03631%;
       width: 100%;
-      display: none; }
+      display: none;
+      position: static; }
       nav:last-child {
         margin-right: 0; } }
   nav ol {

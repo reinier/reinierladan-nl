@@ -24,6 +24,7 @@ nav {
 	@include media($mobile) {
     	@include span-columns(2);
     	display: none;
+		position: static;	
 	}
 
 	position: -webkit-sticky;
