@@ -1,7 +1,5 @@
 # Read me
 
-Follow the development of this site on [beta.reinierladan.nl](http://beta.reinierladan.nl)
-
 ## Requirements
 - [Gulp](http://gulpjs.com)
 - [Bower](http://bower.io)
