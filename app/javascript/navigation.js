@@ -1,10 +1,9 @@
 $( document ).ready(function() {
 	$('.open-navigation').click(function(){
+		$('body').addClass('navigation-is-open');
+	});
 
-		if($('body').hasClass('navigation-is-open')){
-			$('body').removeClass('navigation-is-open');
-		} else {
-			$('body').addClass('navigation-is-open');
-		}
+	$('.close-navigation').click(function(){
+		$('body').removeClass('navigation-is-open');
 	});
 });

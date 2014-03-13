@@ -5,11 +5,12 @@
 {% include "./_partials/header.html" %}
 	<div class="container">
 		<button class="open-navigation">&#x2261;</button>
+		<button class="close-navigation">&#10006;</button>
+		
 		<nav id="navigation">
 			<ol>
 				{% if showLinkToHome %}
-					<li><a href="/index.html"><strong>Ga naar homepage</strong></a></li>
-					<hr>
+					<li class="go-to-home"><a href="/index.html"><strong>Ga naar homepage</strong></a></li>
 				{% endif %}
 				<li><a href="/over-reinier-ladan.html">Over Reinier Ladan</a></li>
 				<li><a href="/projecten.html">Projecten</a></li>

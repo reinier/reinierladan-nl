@@ -787,11 +787,10 @@ footer {
   body.navigation-is-open nav {
     display: block; } }
 
-.open-navigation {
+.open-navigation, .close-navigation {
   display: none; }
   @media screen and (max-width: 900px) {
-    .open-navigation {
-      display: block;
+    .open-navigation, .close-navigation {
       line-height: 0;
       position: absolute;
       left: 0;
@@ -802,6 +801,19 @@ footer {
       background: #fff;
       text-decoration: none;
       padding: 1em 1em 1.3em 1em; } }
+
+@media screen and (max-width: 900px) {
+  .open-navigation {
+    display: block; } }
+
+.close-navigation {
+  font-size: 1.2em; }
+
+@media screen and (max-width: 900px) {
+  body.navigation-is-open .open-navigation {
+    display: none; }
+  body.navigation-is-open .close-navigation {
+    display: block; } }
 
 nav {
   float: left;
@@ -823,12 +835,10 @@ nav {
       display: block;
       margin-right: 16.03631%;
       width: 100%;
+      position: static;
       display: none; }
       nav:last-child {
         margin-right: 0; } }
-  @media screen and (max-width: 900px) {
-    nav {
-      position: static; } }
   nav ol {
     list-style-type: disc;
     padding: 1em 0 1em 3em;
@@ -854,10 +864,6 @@ nav {
       nav ol li:last-child {
         margin-bottom: 0; }
       @media screen and (max-width: 900px) {
-        nav ol li {
-          list-style-type: none;
-          display: inline-block; } }
-      @media screen and (max-width: 900px) {
         nav ol li a {
           border: 1px solid #0772e4;
           border-radius: 3px;
@@ -873,7 +879,8 @@ nav {
           text-decoration: none;
           text-shadow: 0 1px 0 #0068d7;
           background-clip: padding-box;
-          font-size: 1.1em; }
+          font-size: 1.1em;
+          font-weight: normal; }
           nav ol li a:hover:not(:disabled) {
             box-shadow: inset 0 1px 0 0 #60a3ec;
             cursor: pointer;
@@ -886,6 +893,12 @@ nav {
           nav ol li a:disabled {
             opacity: 0.5;
             cursor: not-allowed; } }
+      @media screen and (max-width: 900px) {
+        nav ol li {
+          list-style-type: none;
+          display: inline-block; }
+          nav ol li.go-to-home {
+            display: block; } }
 
 .content {
   float: left;

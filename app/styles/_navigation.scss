@@ -1,8 +1,8 @@
-.open-navigation {
+.open-navigation,
+.close-navigation {
 	display: none;
 
 	@include media($mobile) {
-		display: block;
 		line-height: 0;
 	    position:absolute;
 	    left:0;
@@ -16,15 +16,33 @@
 	}
 }
 
+.open-navigation {
+	@include media($mobile) {
+		display: block;
+	}
+}
+
+.close-navigation {
+	font-size: 1.2em;
+}
+
+@include media($mobile) {
+	body {
+		&.navigation-is-open {
+			.open-navigation {
+				display: none;
+			}
+			.close-navigation {
+				display: block;
+			}
+		}
+	}
+}
+
 nav {
 	@include span-columns(3);
 
 	display: block;
-	
-	@include media($mobile) {
-    	@include span-columns(2);
-    	display: none;
-	}
 
 	position: -webkit-sticky;
 	position: -moz-sticky;
@@ -34,7 +52,9 @@ nav {
 	top: 15px;
 
 	@include media($mobile) {
-		position: static;	
+    	@include span-columns(2);
+		position: static;
+    	display: none;	
 	}
 
 	ol {
@@ -67,15 +87,20 @@ nav {
 				margin-bottom: 0;
 			}
 
-			@include media($mobile) {
-				list-style-type: none;
-				display: inline-block;
-			}
-
 			a {
 				@include media($mobile) {
 					@include button;
 					font-size: 1.1em;
+					font-weight: normal;
+				}
+			}
+
+			@include media($mobile) {
+				list-style-type: none;
+				display: inline-block;
+				
+				&.go-to-home {
+					display: block;
 				}
 			}
 		}
