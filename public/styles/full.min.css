@@ -781,8 +781,11 @@ footer {
     .profile-pic {
       width: 75px; } }
 
-body.navigation-is-open .header {
-  margin-bottom: 0em; }
+@media screen and (max-width: 900px) {
+  body.navigation-is-open .header {
+    margin-bottom: 0em; }
+  body.navigation-is-open nav {
+    display: block; } }
 
 .open-navigation {
   display: none; }

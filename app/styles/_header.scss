@@ -79,10 +79,18 @@
 	}
 }
 
-body {
-	&.navigation-is-open {
-		.header {
-			margin-bottom: 0em;
+@include media($mobile) {
+	body {
+		&.navigation-is-open {
+			.header {
+				margin-bottom: 0em;
+			}
+
+			nav {
+				display: block;
+			}
 		}
+
+
 	}
 }
