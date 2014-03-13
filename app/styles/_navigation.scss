@@ -5,14 +5,14 @@
 	@include media($mobile) {
 		line-height: 0;
 	    position:absolute;
-	    left:0;
-	    top:0;
-	    font-size: 1.8em;
+	    left:5px;
+	    top:5px;
+	    font-size: 1.6em;
 	    border: 0;
 	    color: #333;
 	    background: #fff;
 	    text-decoration: none;
-	    padding: 1em 1em 1.3em 1em;
+	    padding: 0.8em 0.8em 1em 0.8em;
 	}
 }
 
@@ -23,7 +23,8 @@
 }
 
 .close-navigation {
-	font-size: 1.2em;
+	padding-left: 0.7em;
+	padding-right: 0.7em;
 }
 
 @include media($mobile) {
