@@ -813,6 +813,7 @@ nav {
   position: -moz-sticky;
   position: -ms-sticky;
   position: -o-sticky;
+  position: sticky;
   top: 15px; }
   nav:last-child {
     margin-right: 0; }
@@ -822,10 +823,12 @@ nav {
       display: block;
       margin-right: 16.03631%;
       width: 100%;
-      display: none;
-      position: static; }
+      display: none; }
       nav:last-child {
         margin-right: 0; } }
+  @media screen and (max-width: 900px) {
+    nav {
+      position: static; } }
   nav ol {
     list-style-type: disc;
     padding: 1em 0 1em 3em;
