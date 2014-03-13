@@ -13,7 +13,7 @@
 
 	@include media($mobile) {
 		@include border-bottom-radius(0px);
-		margin-bottom: 0;
+		margin-bottom: 2em;
 	}
 
 	.header__logo {
@@ -45,6 +45,13 @@
 		a {
 			text-decoration: none;
 			color: #fff;
+			@include media($mobile) {
+				text-decoration: underline;
+			}
+		}
+
+		@include media($mobile) {
+			margin-top: 0;
 		}
 	}
 }
@@ -66,4 +73,16 @@
 .profile-pic {
 	width: 150px; /* original size is 300, but downscaled for retina purposes */
 	height: auto;
+
+	@include media($mobile) {
+		width: 75px;
+	}
+}
+
+body {
+	&.navigation-is-open {
+		.header {
+			margin-bottom: 0em;
+		}
+	}
 }

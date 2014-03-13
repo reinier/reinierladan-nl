@@ -1,7 +1,29 @@
+.open-navigation {
+	display: none;
+
+	@include media($mobile) {
+		display: block;
+		line-height: 0;
+	    position:absolute;
+	    left:0;
+	    top:0;
+	    font-size: 1.8em;
+	    border: 0;
+	    color: #333;
+	    background: #fff;
+	    text-decoration: none;
+	    padding: 1em 1em 1.3em 1em;
+	}
+}
+
 nav {
 	@include span-columns(3);
+
+	display: block;
+	
 	@include media($mobile) {
     	@include span-columns(2);
+    	display: none;
 	}
 
 	position: -webkit-sticky;
@@ -9,10 +31,6 @@ nav {
 	position: -ms-sticky;
 	position: -o-sticky;
 	top: 15px;
-
-	@include media($mediumscreen) {
-		position: static;
-	}
 
 	ol {
 		list-style-type: disc;

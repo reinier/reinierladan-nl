@@ -27,7 +27,7 @@ var sassConfig = {
 var paths = {
   sass:       'app/**/*.scss',
   images:     'app/images/**/*',
-  javascript: 'app/javascript/**/*',
+  javascript: 'app/javascript/**/*.js',
   bowerfiles: 'bower_modules/jquery/dist/jquery.min.js',
   fonts:      'app/fonts/**/*',
   html:       'app/html/**/*.html',
@@ -59,14 +59,17 @@ gulp.task('fonts', function() {
 		.pipe(gulp.dest('./public/fonts'));
 });
 
+gulp.task('bowerfiles', function() {
+  return gulp.src(paths.bowerfiles)
+    .pipe(gulp.dest('./public/javascript'));    
+});
+
 gulp.task('javascript', function() {
 
-  var getBowerFiles = gulp.src(paths.bowerfiles);
-  var getUserJs = gulp.src(paths.javascript).pipe(uglify());
-
-  return es.concat(getBowerFiles, getUserJs)
-        .pipe(concat('all.min.js'))
-        .pipe(gulp.dest('./public/javascript'));
+  return gulp.src(paths.javascript).pipe(uglify())
+    .pipe(concat('all.min.js'))
+    .pipe(gulp.dest('./public/javascript'));
+       
 });
 
 gulp.task('templates', function() {
@@ -78,6 +81,7 @@ gulp.task('templates', function() {
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['styles']);
   gulp.watch(paths.html, ['templates']);
+  gulp.watch(paths.javascript, ['javascript']);
 });
 
 gulp.task('connect', connect.server({
@@ -85,4 +89,4 @@ gulp.task('connect', connect.server({
 }));
 
 gulp.task('default', ['init','watch','connect']);
-gulp.task('init', ['javascript','images','fonts','styles','templates']);
+gulp.task('init', ['bowerfiles','javascript','images','fonts','styles','templates']);
