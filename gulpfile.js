@@ -31,7 +31,7 @@ var paths = {
   bowerfiles: 'bower_modules/jquery/dist/jquery.min.js',
   fonts:      'app/fonts/**/*',
   html:       'app/**/*.html',
-  content:    ['app/**/*.html','!./app/layout/*']
+  content:    ['app/**/*.html','!./app/layouts/*']
 };
 
 gulp.task('styles', function() {
