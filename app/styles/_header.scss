@@ -34,26 +34,31 @@
 			}
 		}
 	}
-}
 
-.header__logo {
-	@include span-columns(3);
-	text-align: center;
-	margin-top: 1.8em;
-	@include media($mobile) {
-    	@include span-columns(2);
-	}
-}
-
-.header__title {
-	@include span-columns(9);
-	@include media($mobile) {
-    	@include span-columns(2);
-    	text-align: center;
+	&__logo {
+		@include span-columns(3);
+		text-align: center;
+		margin-top: 1.8em;
+		@include media($mobile) {
+	    	@include span-columns(2);
+		}
 	}
 
-	p {
-		font-size: 1.1em;
+	&__title {
+		@include span-columns(9);
+		@include media($mobile) {
+	    	@include span-columns(2);
+	    	text-align: center;
+		}
+
+		p {
+			font-size: 1.1em;
+		}
+	}
+
+	&__link-werkzaamheden,
+	&__telefoonnummer {
+		white-space: nowrap;
 	}
 }
 
@@ -64,11 +69,6 @@
 	@include media($mobile) {
 		font-size: 1.4em;
 	}
-}
-
-.header__link-werkzaamheden,
-.header__telefoonnummer {
-	white-space: nowrap;
 }
 
 .profile-pic {

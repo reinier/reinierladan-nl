@@ -1,44 +1,44 @@
 .spinner {
-  margin-bottom: 1em;
-}
+    margin-bottom: 1em;
 
-.spinner .spinner-label, 
-.spinner .spinner--content, 
-.spinner ul {
-	vertical-align: top;
-	margin: 0;
-	font-size: 1;
-	line-height: 1.8em;
-	height: 1.6em;
+    .spinner-label, 
+    .spinner--content, 
+    ul {
+        vertical-align: top;
+        margin: 0;
+        font-size: 1;
+        line-height: 1.8em;
+        height: 1.6em;
+    }
+
+    .spinner--content {
+        overflow: hidden;
+        margin: 0 0 0 0;
+        border-top: 2px solid #eee;
+        border-bottom: 2px solid #eee;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        -webkit-animation: spinner 30s 2s infinite; /* Safari 4+ */
+        -moz-animation:    spinner 30s 2s infinite; /* Fx 5+ */
+        -o-animation:      spinner 30s 2s infinite; /* Opera 12+ */
+        animation:         spinner 30s 2s infinite; /* IE 10+ */
+
+        li {
+            height: 1.4em;
+            line-height: 1.4em;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            color: #666;
+        }
+    }
 }	
-
-.spinner .spinner--content {
-	overflow: hidden;
-	margin: 0 0 0 0;
-    border-top: 2px solid #eee;
-  border-bottom: 2px solid #eee;
-}
-
-.spinner ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	-webkit-animation: spinner 30s 2s infinite; /* Safari 4+ */
-	-moz-animation:    spinner 30s 2s infinite; /* Fx 5+ */
-	-o-animation:      spinner 30s 2s infinite; /* Opera 12+ */
-	animation:         spinner 30s 2s infinite; /* IE 10+ */
-}
-
-.spinner ul li {
-		height: 1.4em;
-		line-height: 1.4em;
-		margin: 0;
-		padding: 0;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    color: #666;
-}
 
 @keyframes spinner {
   0% {  margin-top: 0;    }

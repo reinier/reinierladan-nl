@@ -3,7 +3,7 @@
 ## Requirements
 - [Gulp](http://gulpjs.com)
 - [Bower](http://bower.io)
-- [Sass](http://sass-lang.com)
+- [Sass](http://sass-lang.com) 3.3 or higher
 - And maybe stuff needed to run the listed things
 
 ## Quick setup

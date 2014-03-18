@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 
 var plumber 		= require('gulp-plumber');
-var sass        = require('gulp-sass');
+var sass        = require('gulp-ruby-sass');
 var es 				  = require('event-stream');
 var concat 			= require('gulp-concat');
 var connect 		= require('gulp-connect');
@@ -17,11 +17,13 @@ var swigoptions  = {
 };
 
 var sassConfig = {
-    includePaths: [
-        './node_modules/node-bourbon/assets/stylesheets',
-        './node_modules/node-neat/assets/stylesheets',
-        './user_modules/bitters'
-    ]
+    loadPath: [
+        'node_modules/node-bourbon/assets/stylesheets',
+        'node_modules/node-neat/assets/stylesheets',
+        'user_modules/bitters',
+        'app/styles/'
+    ],
+    quiet: true /* Needed till Bourbon and Neat are updated for Sass 3.3 */
 };
 
 var paths = {
@@ -44,8 +46,9 @@ gulp.task('styles', function() {
     	.pipe(sass(sassConfig));
 
 	return es.concat(cssNormalize, cssStackicons, cssSite)
-        .pipe(concat('full.min.css'))
-        .pipe(gulp.dest('./public/styles'));
+      .pipe(plumber())
+      .pipe(concat('full.min.css'))
+      .pipe(gulp.dest('./public/styles'));
 
 });
 

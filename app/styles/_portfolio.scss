@@ -10,71 +10,71 @@
 
 .portfolio {
 	padding-right: 0;
-}
 
-.portfolio--home,
-.portfolio--projecten {
-	text-align: justify;
-	text-align-last: justify;
+	&--home,
+	&--projecten {
+		text-align: justify;
+		text-align-last: justify;
 
-	@include media($mobile) {
-		margin-left: 1rem;
+		@include media($mobile) {
+			margin-left: 1rem;
+		}
+
+		&::after {
+			display: inline-block;
+			width:100%;
+			content: ""; 
+		}
 	}
 
-	&::after {
+	&__item {
 		display: inline-block;
-		width:100%;
-		content: ""; 
-	}
-}
+		padding: 0.1em;
+		margin: 0 0 1em 0;
+		background: #FFF084;
 
-.portfolio__item {
-	display: inline-block;
-	padding: 0.1em;
-	margin: 0 0 1em 0;
-	background: #FFF084;
+		@include media($mediumscreen) {
+			margin-right: 1em;
+		}
 
-	@include media($mediumscreen) {
-		margin-right: 1em;
-	}
+		p {
+			text-align: center;
+			margin: 0;
+			padding: 0.4em 0 0.6em 0;
+			font-weight: bold;
+			font-size: 0.8em;
+		}
 
-	p {
-		text-align: center;
-		margin: 0;
-		padding: 0.4em 0 0.6em 0;
-		font-weight: bold;
-		font-size: 0.8em;
+		a {
+			text-decoration: none;
+		}
 	}
 
-	a {
-		text-decoration: none;
-	}
-}
-
-.portfolio__image {
-	width: 200px;
-	height: auto;
-}
-
-.portfolio--meer {
-	padding: 2em 0;
-}
-
-.portfolio--page {
-	h2 {
-		margin-bottom: 1em;
+	&__image {
+		width: 200px;
+		height: auto;
 	}
 
-	p {
-		line-height: 1.7em;
+	&--meer {
+		padding: 2em 0;
 	}
 
-	.clients {
-		margin-bottom: 2em;
+	&--page {
+		h2 {
+			margin-bottom: 1em;
+		}
+
+		p {
+			line-height: 1.7em;
+		}
+
+		.clients {
+			margin-bottom: 2em;
+		}
 	}
 
-	.portfolio__item {
-		font-size: 1.2em;
-		padding: 0.4em;
+	&__item {
+			font-size: 1.2em;
+			padding: 0.4em;
 	}
 }

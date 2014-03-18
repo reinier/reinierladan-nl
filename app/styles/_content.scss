@@ -29,20 +29,29 @@
 		letter-spacing: -0.1em;
 		font-size: 0.7em;
 	}
+
+	&__chapter {
+		margin-bottom: 2.5em;
+	}
+
+	&__chapter--first {
+		font-size: 1.2em;
+		@include media($mobile) {
+			font-size: 1em;
+		} 
+	}
+
+	&__link-linkedin,
+	&__chapter a {
+		white-space: nowrap;
+		
+		@include media($mobile) {
+	 		white-space: normal;
+	 	} 
+	}
 }
 
-.content__chapter {
-	margin-bottom: 2.5em;
-}
-
- .content__chapter--first {
- 	font-size: 1.2em;
- 	@include media($mobile) {
- 		font-size: 1em;
- 	} 
- }
-
- .container {
+.container {
 	@include outer-container;
 }
 
@@ -62,13 +71,4 @@
 	p:last-child {
 		margin-bottom: 0;
 	}
-}
-
-.content__link-linkedin,
-.content__chapter a {
-	white-space: nowrap;
-	
-	@include media($mobile) {
- 		white-space: normal;
- 	} 
 }
