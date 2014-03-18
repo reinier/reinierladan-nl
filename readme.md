@@ -20,3 +20,8 @@
 (this site makes use of the following libs…)
 - [Normalize.css](http://git.io/normalize)
 - [StackIcons](http://stackicons.com) (not through Bower yet, so copied it from source)
+
+## License
+The source code in this repository is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php)
+
+The copy, artwork and other creative stuff in this repository is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)
