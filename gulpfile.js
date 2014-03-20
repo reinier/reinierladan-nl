@@ -1,13 +1,13 @@
 var gulp = require('gulp');
 
-var plumber 		= require('gulp-plumber');
-var sass        = require('gulp-ruby-sass');
-var es 				  = require('event-stream');
-var concat 			= require('gulp-concat');
-var connect 		= require('gulp-connect');
-var swig 			  = require('gulp-swig');
-var marked      = require('swig-marked');
-var uglify      = require('gulp-uglify');
+var plumber = require('gulp-plumber');
+var sass = require('gulp-ruby-sass');
+var es = require('event-stream');
+var concat = require('gulp-concat');
+var connect = require('gulp-connect');
+var swig = require('gulp-swig');
+var marked = require('swig-marked');
+var uglify = require('gulp-uglify');
 
 var swigoptions  = {
   setup: function(swig) {
@@ -27,13 +27,14 @@ var sassConfig = {
 };
 
 var paths = {
-  sass:       'app/**/*.scss',
-  images:     'app/images/**/*',
-  javascript: 'app/javascript/**/*.js',
-  bowerfiles: 'bower_modules/jquery/dist/jquery.min.js',
-  fonts:      'app/fonts/**/*',
-  html:       'app/**/*.html',
-  content:    ['app/**/*.html','!./app/layouts/*']
+    sass: 'app/**/*.scss',
+    images: 'app/images/**/*',
+    javascript: 'app/javascript/**/*.js',
+    bowerfiles: 'bower_modules/jquery/dist/jquery.min.js',
+    fonts: 'app/fonts/**/*',
+    files: 'app/files/**/*',
+    html: 'app/**/*.html',
+    content: ['app/**/*.html','!./app/layouts/*']
 };
 
 gulp.task('styles', function() {
@@ -46,25 +47,26 @@ gulp.task('styles', function() {
     	.pipe(sass(sassConfig));
 
 	return es.concat(cssNormalize, cssStackicons, cssSite)
-      .pipe(plumber())
-      .pipe(concat('full.min.css'))
-      .pipe(gulp.dest('./public/styles'));
+        .pipe(plumber())
+        .pipe(concat('full.min.css'))
+        .pipe(gulp.dest('./public/styles'));
 
 });
 
-gulp.task('images', function() {
-	return gulp.src(paths.images)
+gulp.task('static', function() {
+	gulp.src(paths.images)
 		.pipe(gulp.dest('./public/images'));
-});
 
-gulp.task('fonts', function() {
-	return gulp.src(paths.fonts)
-		.pipe(gulp.dest('./public/fonts'));
+    gulp.src(paths.fonts)
+        .pipe(gulp.dest('./public/fonts'));
+
+    gulp.src(paths.files)
+        .pipe(gulp.dest('./public/files'));
 });
 
 gulp.task('bowerfiles', function() {
   return gulp.src(paths.bowerfiles)
-    .pipe(gulp.dest('./public/javascript'));    
+    .pipe(gulp.dest('./public/javascript'));
 });
 
 gulp.task('javascript', function() {
@@ -72,7 +74,7 @@ gulp.task('javascript', function() {
   return gulp.src(paths.javascript).pipe(uglify())
     .pipe(concat('all.min.js'))
     .pipe(gulp.dest('./public/javascript'));
-       
+
 });
 
 gulp.task('templates', function() {
@@ -92,4 +94,4 @@ gulp.task('connect', connect.server({
 }));
 
 gulp.task('default', ['init','watch','connect']);
-gulp.task('init', ['bowerfiles','javascript','images','fonts','styles','templates']);
+gulp.task('init', ['bowerfiles','javascript','static','styles','templates']);
