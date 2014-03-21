@@ -24,4 +24,4 @@
 ## License
 The source code in this repository is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php)
 
-The copy, artwork and other creative stuff in this repository is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)
+Everything else (like images, text, etc.) is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)
