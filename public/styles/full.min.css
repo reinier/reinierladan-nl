@@ -680,7 +680,7 @@ a {
   text-decoration: underline; }
 
 h1 {
-  margin: 1em 0 0 0;
+  margin: 0.5em 0 0 0;
   font-weight: bold; }
 
 h2 {
@@ -747,7 +747,7 @@ footer {
     margin-right: 2.35765%;
     width: 23.23176%;
     text-align: center;
-    margin-top: 1.8em; }
+    margin-top: 1.5em; }
     .header__logo:last-child {
       margin-right: 0; }
     @media screen and (max-width: 900px) {

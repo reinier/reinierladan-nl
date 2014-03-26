@@ -38,7 +38,7 @@
 	&__logo {
 		@include span-columns(3);
 		text-align: center;
-		margin-top: 1.8em;
+		margin-top: 1.5em;
 		@include media($mobile) {
 	    	@include span-columns(2);
 		}
