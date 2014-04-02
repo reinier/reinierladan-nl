@@ -90,7 +90,8 @@ gulp.task('watch', function() {
 });
 
 gulp.task('connect', connect.server({
-  root: ['public']
+  root: ['public'],
+  livereload: false
 }));
 
 gulp.task('default', ['init','watch','connect']);
