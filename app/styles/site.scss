@@ -1,6 +1,6 @@
 @import "bourbon";
 @import "bitters";
-@import "neat"; 
+@import "neat";
 
 $mobile: new-breakpoint(max-width 900px 2);
 $mediumscreen: new-breakpoint(max-width 1100px 12);
@@ -18,3 +18,5 @@ $default-lineheight: 1.4em;
 
 @import "annotations";
 @import "spinner";
+
+@import "mailchimpform";
