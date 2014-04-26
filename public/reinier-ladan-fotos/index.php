@@ -19,7 +19,7 @@
 
 	define("GALLERY_ROOT", "./");
 	define("DATA_ROOT", "./_sfpg_data/");
-	define("SECURITY_PHRASE", "change this text!");
+	define("SECURITY_PHRASE", "asdadadchange this text!");
 
 	define("DIR_NAME_FILE", "_name.txt");
 	define("DIR_IMAGE_FILE", "_image.jpg");
@@ -86,7 +86,7 @@
 	define("FADE_DURATION_MS", 300);
 	define("LOAD_FADE_GRACE", 500);
 
-	define("TEXT_GALLERY_NAME", "Single File PHP Gallery");
+	define("TEXT_GALLERY_NAME", "Foto's van en over Reinier Ladan");
 	define("TEXT_HOME", "Home");
 	define("TEXT_CLOSE_IMG_VIEW", "Close Image");
 	define("TEXT_ACTUAL_SIZE", "Actual Size");
