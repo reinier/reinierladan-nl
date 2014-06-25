@@ -1,0 +1,475 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>presentatie-rdpa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+html,body{color:black}*:not('#mkdbuttons'){margin:0;padding:0}#wrapper{font:15px helvetica,arial,freesans,clean,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7;padding:3px;background:#fff;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px}p{margin:1em 0}a{color:#4183c4;text-decoration:none}#wrapper{background-color:#fff;padding:30px;margin:15px;font-size:15px;line-height:1.6}#wrapper>*:first-child{margin-top:0 !important}#wrapper>*:last-child{margin-bottom:0 !important}@media screen{#wrapper{box-shadow:0 0 0 1px #cacaca, 0 0 0 4px #eee}}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.7;cursor:text;position:relative;margin:1em 0 15px;padding:0}h1{font-size:2.5em;border-bottom:1px solid #ddd}h2{font-size:2em;border-bottom:1px solid #eee}h3{font-size:1.5em}h4{font-size:1.2em}h5{font-size:1em}h6{color:#777;font-size:1em}p,blockquote,table,pre{margin:15px 0}ul{padding-left:30px}ol{padding-left:30px}ol li ul:first-of-type{margin-top:0px}hr{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;border:0 none;color:#ccc;height:4px;margin:15px 0;padding:0}#wrapper>h2:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child+h2{margin-top:0;padding-top:0}#wrapper>h3:first-child,#wrapper>h4:first-child,#wrapper>h5:first-child,#wrapper>h6:first-child{margin-top:0;padding-top:0}a:first-child h1,a:first-child h2,a:first-child h3,a:first-child h4,a:first-child h5,a:first-child h6{margin-top:0;padding-top:0}h1+p,h2+p,h3+p,h4+p,h5+p,h6+p,ul li>:first-child,ol li>:first-child{margin-top:0}dl{padding:0}dl dt{font-size:14px;font-weight:bold;font-style:italic;padding:0;margin:15px 0 5px}dl dt:first-child{padding:0}dl dt>:first-child{margin-top:0}dl dt>:last-child{margin-bottom:0}dl dd{margin:0 0 15px;padding:0 15px}dl dd>:first-child{margin-top:0}dl dd>:last-child{margin-bottom:0}blockquote{border-left:4px solid #DDD;padding:0 15px;color:#777}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{border-collapse:collapse;border-spacing:0;font-size:100%;font:inherit}table th{font-weight:bold;border:1px solid #ccc;padding:6px 13px}table td{border:1px solid #ccc;padding:6px 13px}table tr{border-top:1px solid #ccc;background-color:#fff}table tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%}code,tt{margin:0 2px;padding:0 5px;white-space:nowrap;border:1px solid #eaeaea;background-color:#f8f8f8;border-radius:3px;font-family:Consolas, 'Liberation Mono', Courier, monospace;font-size:12px;color:#333}pre>code{margin:0;padding:0;white-space:pre;border:none;background:transparent}.highlight pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:14px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px;margin:26px 0}pre code,pre tt{background-color:transparent;border:none}.poetry pre{font-family:Georgia, Garamond, serif !important;font-style:italic;font-size:110% !important;line-height:1.6em;display:block;margin-left:1em}.poetry pre code{font-family:Georgia, Garamond, serif !important;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;white-space:pre-wrap}sup,sub,a.footnote{font-size:1.4ex;height:0;line-height:1;vertical-align:super;position:relative}sub{vertical-align:sub;top:-1px}@media print{body{background:#fff}img,pre,table,figure{page-break-inside:avoid}#wrapper{background:#fff;border:none}pre code{overflow:visible}}@media screen{body.inverted{color:#eee !important;border-color:#555;box-shadow:none}.inverted #wrapper,.inverted hr,.inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted th,.inverted .math,.inverted caption,.inverted dd,.inverted dt,.inverted blockquote{color:#eee !important;border-color:#555;box-shadow:none}.inverted td,.inverted th{background:#333}.inverted pre,.inverted code,.inverted tt{background:#eeeeee !important;color:#111}.inverted h2{border-color:#555555}.inverted hr{border-color:#777;border-width:1px !important}::selection{background:rgba(157,193,200,0.5)}h1::selection{background-color:rgba(45,156,208,0.3)}h2::selection{background-color:rgba(90,182,224,0.3)}h3::selection,h4::selection,h5::selection,h6::selection,li::selection,ol::selection{background-color:rgba(133,201,232,0.3)}code::selection{background-color:rgba(0,0,0,0.7);color:#eeeeee}code span::selection{background-color:rgba(0,0,0,0.7) !important;color:#eeeeee !important}a::selection{background-color:rgba(255,230,102,0.2)}.inverted a::selection{background-color:rgba(255,230,102,0.6)}td::selection,th::selection,caption::selection{background-color:rgba(180,237,95,0.5)}.inverted{background:#0b2531;background:#252a2a}.inverted #wrapper{background:#252a2a}.inverted a{color:#acd1d5}}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k,.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#800080;font-weight:bold}.highlight .gt{color:#a00}.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne,.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#000080}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo{color:#099}.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .se,.highlight .sh,.highlight .si,.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc,.highlight .vg,.highlight .vi{color:#008080}.highlight .il{color:#099}.highlight .gc{color:#999;background-color:#EAF2F5}.type-csharp .highlight .k,.type-csharp .highlight .kt{color:#00F}.type-csharp .highlight .nf{color:#000;font-weight:normal}.type-csharp .highlight .nc{color:#2B91AF}.type-csharp .highlight .nn{color:#000}.type-csharp .highlight .s,.type-csharp .highlight .sc{color:#A31515}body.dark #wrapper{background:transparent !important;box-shadow:none !important}
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+
+</head>
+<body class="normal firstload">
+  <div id="wrapper">
+      <h1 id="researchdevelopmentenprofessioneelaanklooien">Research, development en professioneel aanklooien</h1>
+
+<hr />
+
+<h2 id="yo">YO</h2>
+
+<figure>
+<img src="images/easy.gif" alt="Yo" />
+<figcaption>Yo</figcaption>
+</figure>
+
+<p>^ Sinds het begin van Fronteers een vakbroeder, full-hybrid designer/developer. Geen praatje over de relatie tussen design en development. Ik wil het graag over een van mijn hobbies hebben. </p>
+
+<hr />
+
+<h2 id="hobbies">Hobbies</h2>
+
+<hr />
+
+<h3 id="hobbies">Hobbies</h3>
+
+<ul>
+<li><a href="http://us.battle.net/hearthstone/en/">Hearthstone</a></li>
+</ul>
+
+<figure>
+<img src="images/hearthstone-2.gif" alt="hearthstone" />
+<figcaption>hearthstone</figcaption>
+</figure>
+
+<hr />
+
+<h3 id="hobbies">Hobbies</h3>
+
+<ul>
+<li>Hearthstone</li>
+<li><a href="http://nl.wikipedia.org/wiki/Game_of_Thrones">Game of Thrones</a></li>
+</ul>
+
+<figure>
+<img src="images/dinklage-2.gif" alt="Dinklage" />
+<figcaption>Dinklage</figcaption>
+</figure>
+
+<p>^ Wat deze twee hobbies gemeen hebben is dat elke dag nieuwe content over het onderwerp online wordt gezet dat je in je leven niet kan lezen. Dat raakt mijn derde hobbie ook heel erg. </p>
+
+<hr />
+
+<h3 id="hobbies">Hobbies</h3>
+
+<ul>
+<li>Hearthstone</li>
+<li>Game of Thrones</li>
+<li>Dingen leren</li>
+</ul>
+
+<figure>
+<img src="images/klasje.jpg" alt="Schoolklas" />
+<figcaption>Schoolklas</figcaption>
+</figure>
+
+<hr />
+
+<h2 id="dingenleren">Dingen leren</h2>
+
+<figure>
+<img src="images/klasje.jpg" alt="Schoolklas" />
+<figcaption>Schoolklas</figcaption>
+</figure>
+
+<p>^ Ik moet mezelf goed bijhouden omdat ik met beide benen in twee vakgebieden sta. </p>
+
+<p>^ Hoe doen andere dat? </p>
+
+<p>^ Leren als doel an sich, andere weten namelijk altijd alles veel beter dus de beste in iets worden kan geen doel meer zijn. </p>
+
+<hr />
+
+<p><a href="https://www.youtube.com/watch?v=ShTSo7LkU5g">YoYo Baby</a> </p>
+
+<hr />
+
+<figure>
+<img src="images/6yearold.png" alt="6 year old" />
+<figcaption>6 year old</figcaption>
+</figure>
+
+<p>^ Laat je vooral niet kennen door mensen die meer weten dan jij. Vroeger kon je nog de slimste van het dorp zijn, nu is de wereld een dorp geworden en heb je 7 miljard concurenten. </p>
+
+<hr />
+
+<h2 id="levenlangleren">Leven lang leren</h2>
+
+<figure>
+<img src="images/graduation.jpg" alt="Geslaagd" />
+<figcaption>Geslaagd</figcaption>
+</figure>
+
+<p>^ Ons vakgebied ontkom je er niet aan. Andere vakgebieden zullen niet veel anders worden. Technologie ontwikkeld zich in rap tempo en alle bedrijven worden uiteindelijk technologiebedrijven. Het is straks niet belangrijk wat je weet maar hoe snel je je kan aanpassen aan de nieuwe realiteit. </p>
+
+<p>^ &#8216;Een leven lang leren&#8217; staat sowieso op de maatschappelijke agenda. Politiek richt zich erg op traditionele instituten. Ikzelf hou meer van de DIY aanpak. </p>
+
+<hr />
+
+<h2 id="aanklooien">Aanklooien</h2>
+
+<figure>
+<img src="images/spanje.png" alt="Spaanse stier" />
+<figcaption>Spaanse stier</figcaption>
+</figure>
+
+<p>^ Mensen doen maar wat, klooien maar wat aan, als je nooit iets probeert kom je ook nergens. Het zit in onze genen. </p>
+
+<hr />
+
+<figure>
+<img src="images/da-0a.gif" alt="Darwin Award 1" />
+<figcaption>Darwin Award 1</figcaption>
+</figure>
+
+<hr />
+
+<figure>
+<img src="images/da-0c.jpg" alt="70%" />
+<figcaption>70%</figcaption>
+</figure>
+
+<hr />
+
+<figure>
+<img src="images/da-0d.jpg" alt="Darwin Award 3" />
+<figcaption>Darwin Award 3</figcaption>
+</figure>
+
+<hr />
+
+<figure>
+<img src="images/da-1b.gif" alt="140%" />
+<figcaption>140%</figcaption>
+</figure>
+
+<hr />
+
+<figure>
+<img src="images/da-0e.gif" alt="Darwin Award 5" />
+<figcaption>Darwin Award 5</figcaption>
+</figure>
+
+<hr />
+
+<figure>
+<img src="images/da-0f.gif" alt="130%" />
+<figcaption>130%</figcaption>
+</figure>
+
+<hr />
+
+<figure>
+<img src="images/da-1a.gif" alt="Darwin Award 7" />
+<figcaption>Darwin Award 7</figcaption>
+</figure>
+
+<hr />
+
+<figure>
+<img src="images/da-1c.gif" alt="130%" />
+<figcaption>130%</figcaption>
+</figure>
+
+<hr />
+
+<h2 id="professioneelaanklooien">Professioneel aanklooien</h2>
+
+<figure>
+<img src="images/profi2-b.gif" alt="Zo professioneel" />
+<figcaption>Zo professioneel</figcaption>
+</figure>
+
+<p>^ Ik wil het niet hebben over &#8216;aanklooien gone wrong&#8217; maar over &#8216;professioneel&#8217; aanklooien. </p>
+
+<hr />
+
+<h2 id="aanklooien">Aanklooien</h2>
+
+<ul>
+<li>Niet weten waar je heen gaat maar toch gaan <strong>of</strong></li>
+<li>Weten waar je heen wilt maar niet hoe</li>
+</ul>
+
+<hr />
+
+<h2 id="professioneelaanklooien">Professioneel aanklooien</h2>
+
+<ul>
+<li><em>Niet weten waar je heen gaat maar toch gaan</em> <strong>of</strong></li>
+<li><em>Weten waar je heen wilt maar niet hoe</em></li>
+<li>Weten wat de consequenties zijn als het fout gaat</li>
+<li>Niet alles moet nieuw voor je zijn</li>
+<li>Doe gewoon op je gemakkie, ga niet te snel</li>
+</ul>
+
+<p>^ Apple, Google, Facebook en Twitter zijn grofweg zo ontstaan. Columbus is zo naar Amerika gevaren. Op hackathons wordt aangeklooid. Het elektrische scheerapparaat is een uitvinding van Philips, uitgevonden buiten het beeld van de toenmalige directeur Anton Philips in een soort aanklooiteam. Als ik het verder over aanklooien heb dan bedoel ik &#8216;professioneel aanklooien&#8217;. </p>
+
+<hr />
+
+<h2 id="hetwebbehapbaarmaken">Het web behapbaar maken</h2>
+
+<figure>
+<img src="images/het-internet.png" alt="Het web" />
+<figcaption>Het web</figcaption>
+</figure>
+
+<p>^ Om te beginnen met aanklooien moet je of weten waar je naartoe wilt of weten wat je wilt gaan doen. Het web vormt daarbij de grootste inspiratiebron. </p>
+
+<hr />
+
+<h2 id="eensysteem">Een systeem</h2>
+
+<hr />
+
+<h3 id="eensysteem">Een systeem</h3>
+
+<ul>
+<li>Verzamel</li>
+<li>Verwerk</li>
+<li>Doen</li>
+</ul>
+
+<hr />
+
+<h3 id="eensysteem">Een systeem</h3>
+
+<ul>
+<li>Verzamel (brainstorm/research)</li>
+<li>Verwerk (schetsen)</li>
+<li>Doen (wireframen)</li>
+</ul>
+
+<p>^ Deels gebaseerd op GTD (<a href="http://en.wikipedia.org/wiki/Getting_Things_Done">wat is GTD?</a>), deels gebaseerd op mijn werkzaamheden als ontwerper </p>
+
+<hr />
+
+<h2 id="verzamel">Verzamel</h2>
+
+<p>^ Verzamelen doe ik de hele dag door. Via allerlei kanalen komen er interessante artikelen, video&#8217;s en opensource projecten mijn kant op. Via twitter, rss (hackernews25, persoonlijke blogs van frontenders, a list apart etc.), wikipedia safari&#8217;s, mailinglijsten, noem maar op. Deze sla ik allemaal op. Alles waarvan ik maar het vermoeden heb dat het interessant kan zijn sla ik op. Voorbeeld Yoeran. </p>
+
+<hr />
+
+<h3 id="voorbeeldfont-naminginscssvanyoeran">Voorbeeld: Font-naming in SCSS van Yoeran</h3>
+
+<hr />
+
+<p><img src="images/voorbeeld-1b.png" alt="50%" /><br/>
+<img src="images/voorbeeld-2.png" alt="50%" /> </p>
+
+<hr />
+
+<h3 id="opslaanineenverzamelbak">Opslaan in een verzamelbak</h3>
+
+<hr />
+
+<ul>
+<li><a href="http://support.apple.com/kb/TI39">Reading List</a></li>
+<li><a href="http://pinboard.in/">Pinboard</a></li>
+<li><a href="https://delicious.com/">Delicious</a></li>
+</ul>
+
+<p>^ Maak het voor jezelf zo makkelijk mogelijk. Zoek naar plugins voor je browser, integratie met twitter en rss apps. </p>
+
+<hr />
+
+<h3 id="voorbeeldenvanintegratie">Voorbeelden van integratie</h3>
+
+<ul>
+<li><a href="http://tapbots.com/software/tweetbot/">Tweetbot</a> kan overweg met Reading List en Pinboard</li>
+<li>Pinboard heeft een handige bookmarklet</li>
+<li>Pinboard zit in <a href="https://ifttt.com/">IFTTT</a></li>
+<li>Voor <a href="http://www.alfredapp.com/">Alfred</a> zijn er workflows voor Pinboard</li>
+</ul>
+
+<hr />
+
+<h3 id="sparkfile">Sparkfile</h3>
+
+<ul>
+<li><a href="https://medium.com/the-writers-room/the-spark-file-8d6e7df7ae58">Sparkfile</a> voor ideeen die geen links zijn</li>
+</ul>
+
+<p>^ Er zijn natuurlijk ook andere zaken dan links waar je tegenaan loopt zoals een idee voor een nieuw project of product of een boek dat je wilt lezen. Bewaar deze in een sparkfile. </p>
+
+<hr />
+
+<h2 id="verwerk">Verwerk</h2>
+
+<hr />
+
+<h3 id="weggooiendoenofopslaan">Weggooien, doen of opslaan</h3>
+
+<ul>
+<li>Is het interessant genoeg? Nee, weggooien</li>
+<li>Is het binnen een paar minuten te doen of te lezen? Ja, doe het nu</li>
+<li>Is het interessant en niet meteen te doen? Opslaan in je takenbak.</li>
+</ul>
+
+<p>^ Alle verzamelbakken verwerk je eens in de zoveel tijd. Maximaal een uurtje per week moet voldoende zijn. </p>
+
+<hr />
+
+<h3 id="takenbak">Takenbak</h3>
+
+<p>^ Een takenbak kan van alles zijn, zolang het maar de enige plek is waar je kijkt voor het doen van taken. Dit komt voort uit de GTD filosofie. Mijn favoriete takenbak is <a href="https://www.omnigroup.com/omnifocus">Omnifocus</a>. </p>
+
+<hr />
+
+<h3 id="voorbeeldyoeranleeshetartikel">Voorbeeld Yoeran: Lees het artikel</h3>
+
+<figure>
+<img src="images/artikel-yoeran.png" alt="right 60%" />
+<figcaption>right 60%</figcaption>
+</figure>
+
+<p>^ Ik lees het artikel vluchtig en besluit dat ik ermee wil aanklooien. Hoe en wat weet ik nog niet, maar ik ga het een keer toepassen. Ik zet het in Omnifocus. </p>
+
+<hr />
+
+<p><img src="images/omnifocus.jpg" alt="90%" /><br/>
+<img src="images/omnifocus-uitgelicht.jpg" alt="90%" /> </p>
+
+<hr />
+
+<h3 id="zeteenduidelijkeactievoorjezelfklaar">Zet een duidelijke actie voor jezelf klaar</h3>
+
+<figure>
+<img src="images/taak-yoeran.png" alt="right 110%" />
+<figcaption>right 110%</figcaption>
+</figure>
+
+<hr />
+
+<h2 id="doen">Doen</h2>
+
+<hr />
+
+<h3 id="doen">Doen</h3>
+
+<ul>
+<li>Ruim aanklooitijd in</li>
+<li>Maak van leren je hobby</li>
+<li>Blijf nieuwsgierig</li>
+</ul>
+
+<p>^ Kwestie van tijd inruimen. Pak je takenbak erbij en doe waar je zin in hebt. Ik heb het misschien wat makkelijker als freelancer, maar het zou eigenlijk goed zijn van je baas om je hiervoor tijd te geven. Je baas moet zich niet afvragen wat de consequenties zijn van het toelaten van aanklooitijd, de baas moet zich afvragen wat de consequenties zijn als je die tijd niet krijgt. </p>
+
+<hr />
+
+<h2 id="extrazakenomopteletten">Extra zaken om op te letten</h2>
+
+<hr />
+
+<h3 id="verander1dingbinnenprocess">Verander 1 ding binnen process</h3>
+
+<ul>
+<li>Sass ipv Less</li>
+<li>Bourbon ipv bootstrap</li>
+<li>Atom ipv Sublime Text</li>
+</ul>
+
+<hr />
+
+<h3 id="gaopensource">Ga open source</h3>
+
+<ul>
+<li>Het verandert de manier waarop je naar je eigen code kijkt</li>
+<li>Documentatie wordt ineens belangrijker en geeft inzicht in je keuzes</li>
+<li>Je leert iets over het distribueren van je code (composer, bower etc)</li>
+<li>Direct feedback van vakgenoten</li>
+</ul>
+
+<hr />
+
+<h3 id="forkenklooiaan">Fork en klooi aan</h3>
+
+<ul>
+<li>Timebox een periode om aan te klooien</li>
+<li>Verander en bekijk het resultaat</li>
+</ul>
+
+<p>^ Timeboxen van aanklooien met een open source project. Zo ben ik begonnen met het leren van php via hotscripts.com in 2000. </p>
+
+<hr />
+
+<h3 id="houdeschadebeperkt">Hou de schade beperkt</h3>
+
+<ul>
+<li><a href="http://www.shirt-pocket.com/SuperDuper/superduperdescription.html">Superduper</a>, <a href="https://www.apple.com/nl/support/timemachine/">Timemachine</a>, <a href="https://www.dropbox.com/">Dropbox</a></li>
+<li><a href="https://agilebits.com/onepassword">1password</a>, <a href="http://brew.sh/">Homebrew</a> en <a href="http://caskroom.io/">Cask</a> + brewfile (bv. <a href="https://gist.github.com/reinier/9271361">mijn brewfile</a>), <a href="http://git-scm.com/">Git</a>, <a href="http://www.vagrantup.com/">Vagrant</a></li>
+</ul>
+
+<p>^ Ik was altijd een beetje bang voor de commandline. Maar toen ik voor de zoveelste keer aan mijn ouders vertelde &#8216;probeer gewoon, je kunt eigenlijk niks kapotmaken&#8217; ging ik dat principe ook op de commandline toepassen. </p>
+
+<hr />
+
+<h3 id="houdeschadebeperktineenproject">Hou de schade beperkt in een project</h3>
+
+<ul>
+<li>Branch alsof het niks is</li>
+</ul>
+
+<p>^ Door veel te branchen en dingen uit te proberen zorg je ervoor dat je kunt experimenteren binnen bestaande projecten en toch het project verder niet in gevaar brengt. </p>
+
+<hr />
+
+<h3 id="houeenlogboekbij">Hou een logboek bij</h3>
+
+<ul>
+<li>Na formatteren Mac</li>
+<li>Initialiseren van een project</li>
+</ul>
+
+<p>^ Na formatteren systeem logboek bijgehouden, <a href="https://gist.github.com/reinier/9270755">staat openbaar online in Gist</a>. </p>
+
+<hr />
+
+<h3 id="leertussendebedrijvendoor">Leer tussen de bedrijven door</h3>
+
+<ul>
+<li>Podcast luisteren (in de auto, de trein, tijdens het afwassen)</li>
+<li>Youtube kanalen (tijdens het strijken bv. Voorbeelden: <a href="http://www.universiteitvannederland.nl">Universiteit van NL</a>, <a href="http://fastmovingtargets.nl">Fast Moving Targets</a>, <a href="http://www.ted.com">TED</a>)</li>
+</ul>
+
+<hr />
+
+<h3 id="begingewoon">Begin gewoon</h3>
+
+<p>^ Dingen die je je afvraagt, gewoon doen. Podcast begonnen door gewoon te beginnen. The Panel vanuit een behoefte. Presentatie door 1 ding te veranderen. </p>
+
+<ul>
+<li><a href="http://appelsenperenshow.nl">De Appels en Peren Show</a></li>
+<li><a href="https://github.com/reinier/laravel-thepanel">The Panel: Slow Crowd Curated Links Platform</a></li>
+<li>Deze presentatie in <a href="http://www.decksetapp.com">Deckset</a> gemaakt ipv Keynote.</li>
+</ul>
+
+<hr />
+
+<h3 id="aldoendeleertmenen">Al doende leert men <em>en</em></h3>
+
+<h3 id="vanfoutenkunjeleren">Van fouten kun je leren</h3>
+
+<figure>
+<img src="images/aldoende.gif" alt="200%" />
+<figcaption>200%</figcaption>
+</figure>
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
