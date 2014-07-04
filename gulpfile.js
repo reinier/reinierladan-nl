@@ -18,12 +18,11 @@ var swigoptions  = {
 
 var sassConfig = {
     loadPath: [
-        'node_modules/node-bourbon/assets/stylesheets',
-        'node_modules/node-neat/assets/stylesheets',
+        'bower_modules/bourbon/dist',
+        'bower_modules/neat/app/assets/stylesheets',
         'user_modules/bitters',
         'app/styles/'
-    ],
-    quiet: true /* Needed till Bourbon and Neat are updated for Sass 3.3 */
+    ]
 };
 
 var paths = {
