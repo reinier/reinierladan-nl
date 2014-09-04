@@ -14,7 +14,7 @@
     npm install
 ```
 
-- Then you are ready to startup Gulp in the root directory to watch for changes and compile them: `gulp` - The test site will be at [0.0.0.0:3000](http://0.0.0.0:3000)
+- Then you are ready to start up Gulp in the root directory to watch for changes and compile them: `gulp` - The test site will be at [localhost:3000](http://localhost:3000)
 
 ## Thanks to
 (this site makes use of the following things…)

@@ -1,4 +1,4 @@
-/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 
 /**
  * 1. Set default font family to sans-serif.
@@ -24,7 +24,9 @@ body {
    ========================================================================== */
 
 /**
- * Correct `block` display not defined in IE 8/9.
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
  */
 
 article,
@@ -66,8 +68,8 @@ audio:not([controls]) {
 }
 
 /**
- * Address `[hidden]` styling not present in IE 8/9.
- * Hide the `template` element in IE, Safari, and Firefox < 22.
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
 
 [hidden],
@@ -99,7 +101,7 @@ a:hover {
    ========================================================================== */
 
 /**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
 
 abbr[title] {
@@ -107,7 +109,7 @@ abbr[title] {
 }
 
 /**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
 
 b,
@@ -116,7 +118,7 @@ strong {
 }
 
 /**
- * Address styling not present in Safari 5 and Chrome.
+ * Address styling not present in Safari and Chrome.
  */
 
 dfn {
@@ -125,7 +127,7 @@ dfn {
 
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
+ * contexts in Firefox 4+, Safari, and Chrome.
  */
 
 h1 {
@@ -174,7 +176,7 @@ sub {
    ========================================================================== */
 
 /**
- * Remove border when inside `a` element in IE 8/9.
+ * Remove border when inside `a` element in IE 8/9/10.
  */
 
 img {
@@ -182,7 +184,7 @@ img {
 }
 
 /**
- * Correct overflow displayed oddly in IE 9.
+ * Correct overflow not hidden in IE 9/10/11.
  */
 
 svg:not(:root) {
@@ -193,7 +195,7 @@ svg:not(:root) {
    ========================================================================== */
 
 /**
- * Address margin not present in IE 8/9 and Safari 5.
+ * Address margin not present in IE 8/9 and Safari.
  */
 
 figure {
@@ -242,7 +244,7 @@ samp {
  * 1. Correct color not being inherited.
  *    Known issue: affects color of disabled elements.
  * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
 
 button,
@@ -256,7 +258,7 @@ textarea {
 }
 
 /**
- * Address `overflow` set to `hidden` in IE 8/9/10.
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
 
 button {
@@ -266,7 +268,7 @@ button {
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
  * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8+, and Opera
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
 
@@ -345,8 +347,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 /**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
 
@@ -379,7 +381,7 @@ fieldset {
 }
 
 /**
- * 1. Correct `color` not being inherited in IE 8/9.
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
 
@@ -389,7 +391,7 @@ legend {
 }
 
 /**
- * Remove default vertical scrollbar in IE 8/9.
+ * Remove default vertical scrollbar in IE 8/9/10/11.
  */
 
 textarea {
@@ -430,7 +432,7 @@ input[type="submit"] {
   box-shadow: inset 0 1px 0 0 #89a8d5;
   color: white;
   display: inline-block;
-  font-size: 11px;
+  font-size: inherit;
   font-weight: bold;
   background-color: #477dca;
   background-image: -webkit-linear-gradient(#477dca, #2760b2);
@@ -451,9 +453,10 @@ input[type="submit"] {
     background-image: -webkit-linear-gradient(#3c71bb, #255aa5);
     background-image: linear-gradient(#3c71bb, #255aa5); }
   button:active:not(:disabled),
-  input[type="submit"]:active:not(:disabled) {
+  input[type="submit"]:active:not(:disabled), button:focus:not(:disabled),
+  input[type="submit"]:focus:not(:disabled) {
     border: 1px solid #2459a6;
-    box-shadow: inset 0 0 8px 4px #235397, inset 0 0 8px 4px #235397, 0 1px 1px 0 #eeeeee; }
+    box-shadow: inset 0 0 8px 4px #235397, inset 0 0 8px 4px #235397; }
   button:disabled,
   input[type="submit"]:disabled {
     opacity: 0.5;
@@ -461,13 +464,13 @@ input[type="submit"] {
 
 body {
   color: #333333;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1em;
   -webkit-font-smoothing: antialiased;
   line-height: 1.5em; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   line-height: 1.25em;
   margin: 0;
   text-rendering: optimizeLegibility; }
@@ -552,7 +555,7 @@ input,
 label,
 select {
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1em; }
 
 label {
@@ -576,7 +579,7 @@ select[multiple=multiple] {
   border-radius: 0.1875em;
   border: 1px solid #dddddd;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1em;
   margin-bottom: 0.75em;
   padding: 0.5em 0.5em;
@@ -664,7 +667,7 @@ dl {
   box-sizing: border-box; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 100%; }
 
 p {
@@ -890,7 +893,7 @@ nav {
           box-shadow: inset 0 1px 0 0 #8ebcf1;
           color: white;
           display: inline-block;
-          font-size: 11px;
+          font-size: inherit;
           font-weight: bold;
           background-color: #4294f0;
           background-image: -webkit-linear-gradient(#4294f0, #0776f3);
@@ -907,9 +910,9 @@ nav {
             background-color: #2f87ea;
             background-image: -webkit-linear-gradient(#2f87ea, #086fe3);
             background-image: linear-gradient(#2f87ea, #086fe3); }
-          nav ol li a:active:not(:disabled) {
+          nav ol li a:active:not(:disabled), nav ol li a:focus:not(:disabled) {
             border: 1px solid #076fe4;
-            box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3, 0 1px 1px 0 #eeeeee; }
+            box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3; }
           nav ol li a:disabled {
             opacity: 0.5;
             cursor: not-allowed; } }
