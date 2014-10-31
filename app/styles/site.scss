@@ -2,7 +2,7 @@
 @import "bitters";
 @import "neat";
 
-$mobile: new-breakpoint(max-width 900px 2);
+$mobile: new-breakpoint(max-width 900px 12);
 $mediumscreen: new-breakpoint(max-width 1100px 12);
 
 $default-lineheight: 1.4em;

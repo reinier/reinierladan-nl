@@ -1,4 +1,4 @@
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
 /**
  * 1. Set default font family to sans-serif.
@@ -25,7 +25,8 @@ body {
 
 /**
  * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
 
@@ -38,6 +39,7 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
@@ -85,7 +87,7 @@ template {
  */
 
 a {
-  background: transparent;
+  background-color: transparent;
 }
 
 /**
@@ -434,9 +436,9 @@ input[type="submit"] {
   display: inline-block;
   font-size: inherit;
   font-weight: bold;
-  background-color: #477dca;
-  background-image: -webkit-linear-gradient(#477dca, #2760b2);
-  background-image: linear-gradient(#477dca, #2760b2);
+  background-color: #477DCA;
+  background-image: -webkit-linear-gradient(#477DCA, #2760b2);
+  background-image: linear-gradient(#477DCA, #2760b2);
   padding: 7px 18px;
   text-decoration: none;
   text-shadow: 0 1px 0 #1b4f9a;
@@ -463,7 +465,7 @@ input[type="submit"] {
     cursor: not-allowed; }
 
 body {
-  color: #333333;
+  color: #333;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1em;
   -webkit-font-smoothing: antialiased;
@@ -497,7 +499,7 @@ p {
   margin: 0 0 0.75em; }
 
 a {
-  color: #477dca;
+  color: #477DCA;
   text-decoration: none;
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
@@ -509,7 +511,7 @@ a {
     outline: none; }
 
 hr {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -520,7 +522,7 @@ img {
   max-width: 100%; }
 
 abbr, acronym {
-  border-bottom: 1px dotted #dddddd;
+  border-bottom: 1px dotted #DDD;
   cursor: help; }
 
 address {
@@ -534,7 +536,7 @@ del {
   color: #595959; }
 
 blockquote {
-  border-left: 2px solid #dddddd;
+  border-left: 2px solid #DDD;
   color: #595959;
   margin: 1.5em 0;
   padding-left: 0.75em; }
@@ -547,7 +549,7 @@ cite {
 
 fieldset {
   background: #f7f7f7;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   margin: 0 0 0.75em 0;
   padding: 1.5em; }
 
@@ -577,7 +579,7 @@ select[multiple=multiple] {
   transition: border-color;
   background-color: white;
   border-radius: 0.1875em;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1em;
@@ -591,7 +593,7 @@ select[multiple=multiple] {
   textarea:focus,
   input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
   select[multiple=multiple]:focus {
-    border-color: #477dca;
+    border-color: #477DCA;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
     outline: none; }
 
@@ -642,7 +644,7 @@ th {
   text-align: left; }
 
 td {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
   padding: 0.75em 0; }
 
 tr, td, th {
@@ -757,7 +759,7 @@ footer {
       .header__logo {
         float: left;
         display: block;
-        margin-right: 16.03631%;
+        margin-right: 2.35765%;
         width: 100%; }
         .header__logo:last-child {
           margin-right: 0; } }
@@ -772,7 +774,7 @@ footer {
       .header__title {
         float: left;
         display: block;
-        margin-right: 16.03631%;
+        margin-right: 2.35765%;
         width: 100%;
         text-align: center; }
         .header__title:last-child {
@@ -850,7 +852,7 @@ nav {
     nav {
       float: left;
       display: block;
-      margin-right: 16.03631%;
+      margin-right: 2.35765%;
       width: 100%;
       position: static;
       display: none; }
@@ -930,7 +932,7 @@ nav {
     .content {
       float: left;
       display: block;
-      margin-right: 16.03631%;
+      margin-right: 2.35765%;
       width: 100%; }
       .content:last-child {
         margin-right: 0; } }
@@ -1131,247 +1133,167 @@ div.annotation {
 @keyframes spinner {
   0% {
     margin-top: 0; }
-
   1% {
     margin-top: -1.4em; }
-
   5% {
     margin-top: -1.4em; }
-
   6% {
     margin-top: -2.8em; }
-
   10% {
     margin-top: -2.8em; }
-
   11% {
     margin-top: -4.2em; }
-
   15% {
     margin-top: -4.2em; }
-
   16% {
     margin-top: -5.6em; }
-
   20% {
     margin-top: -5.6em; }
-
   21% {
     margin-top: -7em; }
-
   25% {
     margin-top: -7em; }
-
   26% {
     margin-top: -8.4em; }
-
   30% {
     margin-top: -8.4em; }
-
   31% {
     margin-top: -9.8em; }
-
   35% {
     margin-top: -9.8em; }
-
   36% {
     margin-top: -11.2em; }
-
   40% {
     margin-top: -11.2em; }
-
   41% {
     margin-top: -12.6em; }
-
   45% {
     margin-top: -12.6em; }
-
   46% {
     margin-top: -14em; }
-
   50% {
     margin-top: -14em; }
-
   51% {
     margin-top: -15.4em; }
-
   55% {
     margin-top: -15.4em; }
-
   56% {
     margin-top: -16.8em; }
-
   60% {
     margin-top: -16.8em; }
-
   61% {
     margin-top: -18.2em; }
-
   65% {
     margin-top: -18.2em; }
-
   66% {
     margin-top: -19.6em; }
-
   70% {
     margin-top: -19.6em; }
-
   71% {
     margin-top: -21em; }
-
   75% {
     margin-top: -21em; }
-
   76% {
     margin-top: -22.4em; }
-
   80% {
     margin-top: -22.4em; }
-
   81% {
     margin-top: -23.8em; }
-
   85% {
     margin-top: -23.8em; }
-
   86% {
     margin-top: -25.2em; }
-
   90% {
     margin-top: -25.2em; }
-
   91% {
     margin-top: -26.6em; }
-
   95% {
     margin-top: -26.6em; }
-
   96% {
     margin-top: -28em; }
-
   100% {
     margin-top: -28em; } }
 @-webkit-keyframes spinner {
   0% {
     margin-top: 0; }
-
   1% {
     margin-top: -1.4em; }
-
   5% {
     margin-top: -1.4em; }
-
   6% {
     margin-top: -2.8em; }
-
   10% {
     margin-top: -2.8em; }
-
   11% {
     margin-top: -4.2em; }
-
   15% {
     margin-top: -4.2em; }
-
   16% {
     margin-top: -5.6em; }
-
   20% {
     margin-top: -5.6em; }
-
   21% {
     margin-top: -7em; }
-
   25% {
     margin-top: -7em; }
-
   26% {
     margin-top: -8.4em; }
-
   30% {
     margin-top: -8.4em; }
-
   31% {
     margin-top: -9.8em; }
-
   35% {
     margin-top: -9.8em; }
-
   36% {
     margin-top: -11.2em; }
-
   40% {
     margin-top: -11.2em; }
-
   41% {
     margin-top: -12.6em; }
-
   45% {
     margin-top: -12.6em; }
-
   46% {
     margin-top: -14em; }
-
   50% {
     margin-top: -14em; }
-
   51% {
     margin-top: -15.4em; }
-
   55% {
     margin-top: -15.4em; }
-
   56% {
     margin-top: -16.8em; }
-
   60% {
     margin-top: -16.8em; }
-
   61% {
     margin-top: -18.2em; }
-
   65% {
     margin-top: -18.2em; }
-
   66% {
     margin-top: -19.6em; }
-
   70% {
     margin-top: -19.6em; }
-
   71% {
     margin-top: -21em; }
-
   75% {
     margin-top: -21em; }
-
   76% {
     margin-top: -22.4em; }
-
   80% {
     margin-top: -22.4em; }
-
   81% {
     margin-top: -23.8em; }
-
   85% {
     margin-top: -23.8em; }
-
   86% {
     margin-top: -25.2em; }
-
   90% {
     margin-top: -25.2em; }
-
   91% {
     margin-top: -26.6em; }
-
   95% {
     margin-top: -26.6em; }
-
   96% {
     margin-top: -28em; }
-
   100% {
     margin-top: -28em; } }
 #mc_embed_signup {
@@ -1387,3 +1309,5 @@ div.annotation {
   color: green;
   font-weight: bold;
   margin-bottom: 1em; }
+
+/*# sourceMappingURL=site.css.map */

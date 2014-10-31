@@ -40,14 +40,14 @@
 		text-align: center;
 		margin-top: 1.5em;
 		@include media($mobile) {
-	    	@include span-columns(2);
+	    	@include span-columns(12);
 		}
 	}
 
 	&__title {
 		@include span-columns(9);
 		@include media($mobile) {
-	    	@include span-columns(2);
+	    	@include span-columns(12);
 	    	text-align: center;
 		}
 
