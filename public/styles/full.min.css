@@ -663,10 +663,19 @@ dl {
   dl dd {
     margin: 0; }
 
-* {
+/* Neat 1.7.0
+ * http://neat.bourbon.io
+ * Copyright 2012-2014 thoughtbot, inc.
+ * MIT License */
+html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -711,15 +720,20 @@ footer {
   font-size: 0.9em;
   padding: 2em 1em; }
 
+header {
+  background-color: #E60042;
+  background-image: -webkit-linear-gradient(bottom, #E60042, #560800);
+  background-image: linear-gradient(to top,#E60042, #560800); }
+
 .header {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding-bottom: 1em;
+  padding-top: 2em;
+  padding-bottom: 3em;
   margin-bottom: 2em;
-  background-color: #444;
   color: #fff; }
   .header:after {
     content: "";
@@ -728,7 +742,9 @@ footer {
   @media screen and (max-width: 1100px) {
     .header {
       border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px; } }
+      border-bottom-right-radius: 0px;
+      padding-top: 0;
+      padding-bottom: 1em; } }
   @media screen and (max-width: 900px) {
     .header {
       border-bottom-left-radius: 0px;

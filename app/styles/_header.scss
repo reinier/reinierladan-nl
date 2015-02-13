@@ -1,14 +1,20 @@
+header {
+	@include linear-gradient(to top, #E60042, #560800);
+}
+
 .header {
 	@include outer-container;
 	@include border-bottom-radius(5px);
 
-	padding-bottom: 1em;
+	padding-top: 2em;
+	padding-bottom: 3em;
 	margin-bottom: 2em;
-	background-color: #444;
 	color: #fff;
 
 	@include media($mediumscreen) {
 		@include border-bottom-radius(0px);
+		padding-top: 0;
+		padding-bottom: 1em;
 	}
 
 	@include media($mobile) {
